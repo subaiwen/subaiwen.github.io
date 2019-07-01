@@ -20,7 +20,7 @@ layout: page
 <h2>Food</h2>
 
 <ul>
-	<li>Shrimp</li>
-	<li>Orange egg</li>
-	<li>Sautéed beef with Bamboo Shoots</li>
+	<li>Shrimp  🍤</li>
+	<li>Orange egg 🥚</li>
+	<li>Sautéed beef with Bamboo Shoots 🐮</li>
 </ul>
