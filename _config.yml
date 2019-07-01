@@ -8,13 +8,13 @@ description: A blog about technology and stuff related
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/orange_egg.jpg
+picture: assets/images/Orange_egg.JPG
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
 resume-external: local
-resume-url: https://subaiwen.github.io/assets/resume - Zhijian_Liu.pdf
+resume-url: https://subaiwen.github.io/assets/resume.pdf
 
 url: https://subaiwen.github.io
 # your url: http://USERNAME.github.io
