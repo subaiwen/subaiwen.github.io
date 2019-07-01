@@ -54,18 +54,12 @@ github: subaiwen
 email: 446885833jacob@gmail.com
 
 authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
+    subaiwen:
+        name: Zhijian Liu
+        bio: Interest driven foodaholic | 兴趣使然的摄食者
         external-image: false
-        picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
+        picture: assets/images/avatar.jpg
+        twitter: none
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
