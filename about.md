@@ -11,26 +11,16 @@ layout: page
 <h2>Skill</h2>
 
 <ul class="skill-list">
-	<li>R</li>
-	<li>Python</li>
-	<li>SAS</li>
-	<li>STATA</li>
-	<li>SQL</li>
-	<li>SPSS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li><b>Data science</b>: querying, web-scraping, cleaning, manipulating, modeling, visualizing, reporting</li>
+	<li><b>Regression</b>: regression, GLM, multilevel models, multivariate analysis (PCA/LDA)</li>
+	<li><b>Machine learning</b>: KNN, spline, cluster, tree, kernel machine, model selection and regularization</li>
+	<li><b>Data science</b>: R-Shiny (<a href="https://lobs.shinyapps.io/H1B_map/">shiny app</a>), Tableau</li>
 </ul>
 <hr>
-<h2>Projects</h2>
+<h2>Food</h2>
 
 <ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
+	<li>Shrimp</li>
+	<li>Orange egg</li>
+	<li>Sautéed beef with Bamboo Shoots</li>
 </ul>
