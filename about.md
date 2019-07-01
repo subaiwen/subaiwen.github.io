@@ -4,10 +4,10 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-</hr>
+<hr>
 <p>I currently graduated from American University with Master's Degree of Statistics. In the next 2-3 years, I see myself pursuing a Ph.D degree of <b>Data Science</b> or <b>Computer Science</b>. I am really into delicious food, so I cook or go out to find good restaurants from time to time. Please share me nice recipes and restaurants. 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤
 </p>
-
+<hr>
 <h2>Skill</h2>
 
 <ul class="skill-list">
@@ -26,7 +26,7 @@ layout: page
 	<li>Scrum and Kanban</li>
 	<li>TDD e Continuous Integration</li>
 </ul>
-
+<hr>
 <h2>Projects</h2>
 
 <ul>
