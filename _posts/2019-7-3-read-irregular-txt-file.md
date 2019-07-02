@@ -42,6 +42,8 @@ get.filename <- function(path){
 ```
 
 ### 2. Get data
+Useful functions: **readtext::readtext()**, **readLines()**, **writeLines()**, **file.remove()**, **data.frame(matrix(nrow=0))**, **readLines()**, **names(list)**.
+
 ```r
 # tables
 get.data <- function(path){
