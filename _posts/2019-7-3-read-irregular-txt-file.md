@@ -17,7 +17,7 @@ description: Read irregular .txt file
 
 ## Overview:
 
-My friend #8 turned to me for a script that can automatically extract informative data from his irregular <span style="font-family:Fira Mono; font-size:13pt;">.txt</span>
+My friend #8 turned to me for a script that can automatically extract informative data from his irregular <span style="font-family:M+ 1M; font-size:13pt;">.txt</span>
 
 ```r
 text %>%
