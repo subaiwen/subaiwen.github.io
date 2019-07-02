@@ -1,5 +1,5 @@
 ---
-title: "Build up My personal Page Hosted By Github"
+title: "My personal page hosted by Github"
 layout: post
 date: 2019-07-1 1:56
 image: /assets/images/favicon/GitHub-Mark.png
