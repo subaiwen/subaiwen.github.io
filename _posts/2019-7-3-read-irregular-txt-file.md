@@ -17,16 +17,16 @@ description: Read irregular .txt file
 
 ## Overview:
 
-My friend #8 turned to me for a script that can automatically extract informative data from his irregular <span style="font-family:M+ 1M; font-size:12pt;">.txt</span> ([sample.txt](https://github.com/subaiwen/subaiwen.github.io/tree/master/assets/posts/2019-7-3/no8.txt)) and output it as <span style="font-family:M+ 1M; font-size:12pt;">.xlsx</span> with multiple sheets. As he wish. Let's go!
+My friend #8 turned to me for a script that can automatically extract informative data from his irregular **.txt** ([sample.txt](https://github.com/subaiwen/subaiwen.github.io/tree/master/assets/posts/2019-7-3/no8.txt)) and output it as **.xlsx** with multiple sheets. As he wish. Let's go!
 
 ---
 
 ## Tasks:
- * Name the <span style="font-family:M+ 1M; font-size:12pt;">.xlsx</span> with the first row of <span style="font-family:M+ 1M; font-size:12pt;">.txt</span>, which is company name and location
- * Extract all the <span style="font-family:M+ 1M; font-size:12pt;">STEERS</span> relative tables and write them as sheets with its table name in <span style="font-family:M+ 1M; font-size:12pt;">.xlsx</span>
- * Filter data of each table to keep the rows where <span style="font-family:M+ 1M; font-size:12pt;">Wt Range</span> is in the range betweeen 700 and 900.
+ * Name the **.xlsx** with the first row of **.txt**, which is company name and location
+ * Extract all the ** relative tables and write them as sheets with its table name in **.xlsx**
+ * Filter data of each table to keep the rows where **Wt Range** is in the range betweeen 700 and 900.
 
-
+---
 
 ## Steps: 3 functions
 
@@ -104,7 +104,7 @@ filter.data <- function(data.list,lower = 700, upper = 900){
 ```
 
 ### 4. Output
-At the beginning, I tried to use <span style="font-family:M+ 1M; font-size:12pt;">library(xlsx)</span>. It worked several months ago, but this time I got the following warning message:
+At the beginning, I tried to use **library(xlsx)**. It worked several months ago, but this time I got the following warning message:
 
 ```
 WARNING: Initial Java 12 release has broken JNI support and does NOT work. Use stable Java 11 (or watch for 12u if avaiable).
@@ -124,12 +124,12 @@ In addition: Warning message:
 package ‘xlsx’ was built under R version 3.4.4 
 ```
 
-It seemed something went wrong with my <span style="font-family:M+ 1M; font-size:12pt;">Java 12</span>. So I downloaded <span style="font-family:M+ 1M; font-size:12pt;">Java 11</span> and tried to [change the default <span style="font-family:M+ 1M; font-size:12pt;">Java</span> (JDK) version](https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x). It didn't work. 
-It might work if I uninstall <span style="font-family:M+ 1M; font-size:12pt;">Java 12</span> ([instruction](https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html#A1096903))([tool](https://www.java.com/en/download/uninstalltool.jsp)). But I was just too lazy to try. It already took me a while to install it 😭.
+It seemed something went wrong with my **Java 12**. So I downloaded **Java 11** and tried to [change the default **Java** (JDK) version](https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x). It didn't work. 
+It might work if I uninstall **Java 12** ([instruction](https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html#A1096903))([tool](https://www.java.com/en/download/uninstalltool.jsp)). But I was just too lazy to try. It already took me a while to install it 😭.
 
-> Prior to this, I follow the [instruction](https://zhiyzuo.github.io/installation-rJava/) by [Zhiya Zuo](https://zhiyzuo.github.io/) to install <span style="font-family:M+ 1M; font-size:12pt;">Java 12</span>. Quite honestly, I should have install older version.
+> Prior to this, I follow the [instruction](https://zhiyzuo.github.io/installation-rJava/) by [Zhiya Zuo](https://zhiyzuo.github.io/) to install **Java 12**. Quite honestly, I should have install older version.
 
-So I turned to another package <span style="font-family:M+ 1M; font-size:12pt;">writexl</span>. It can do the same thing, but is not based on <span style="font-family:M+ 1M; font-size:12pt;">rJava</span>. Perfect!
+So I turned to another package **writexl**. It can do the same thing, but is not based on **rJava**. Perfect!
 
 ```r
 # output
