@@ -53,5 +53,5 @@ To achieve these features, I might need to modify the template. Some extra skill
 ---
 ### Thanks:
 🔗[Sérgio A. Kopplin](https://koppl.in/), his [template](https://koppl.in/indigo/)
-🔗[Qingbaoying](https://github.com/qiubaiying), his tutorial for mac users(https://github.com/qiubaiying/qiubaiying.github.io/wiki/博客搭建详细教程)
+🔗[Qingbaoying](https://github.com/qiubaiying), his tutorial for mac users[博客搭建详细教程](https://github.com/qiubaiying/qiubaiying.github.io/wiki/博客搭建详细教程)
 🔗[梦幻之云](https://agcaiyun.github.io/), her tutorial for windows user [GitHub Pages + Jekyll 创建个人博客](https://www.jianshu.com/p/9535334ffd54)
