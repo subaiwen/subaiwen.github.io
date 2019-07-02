@@ -18,5 +18,12 @@ My friend #8
 
 ```r
 text %>%
-	str_extract()
+	str_extract() %>%
+	1234
 ```
+
+{% highlight r %}
+text %>%
+	str_extract() %>%
+	1234
+{% endhighlight %}
