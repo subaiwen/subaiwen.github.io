@@ -29,7 +29,6 @@ My friend #8 turned to me for a script that can automatically extract informativ
 ---
 
 ## Steps: 3 functions
-
 ### 1. Get file name
 
 ```r
