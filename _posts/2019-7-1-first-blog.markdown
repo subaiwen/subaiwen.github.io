@@ -46,6 +46,7 @@ Still, there are a lot of things to improve✔️:
 * I want to add a section about 'food'. I could change the name of 'project'. (I disable 'subject' for now) ❌
 * I also want a rating area above the comment area.❌
 ![](http://ww2.sinaimg.cn/large/006tNc79ly1g4ld205l9zj30za07w3zg.jpg)
+* Enable page search.❌
 
 To achieve these features, I might need to modify the template. Some extra skill to equip:
 * [jekyll](https://jekyllrb.com/), [中文](https://www.jekyll.com.cn/)
