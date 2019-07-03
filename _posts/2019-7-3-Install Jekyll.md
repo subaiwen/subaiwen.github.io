@@ -16,6 +16,8 @@ description: Install Jekyll
 
 Following [GitHub Pages + Jekyll 创建个人博客](https://www.jianshu.com/p/9535334ffd54) to install **Jekll** on Windows, I found the guide was out-of-date in the Chinese official Jekyll website where its content has not been updated for 3 years (2016). So I turned to its original [official site](https://jekyllrb.com/) for the [installation guide](https://jekyllrb.com/docs/installation/).
 
+---
+
 ## Steps:
 
 ### 1. Download and Install Ruby+Devkit
@@ -44,6 +46,7 @@ jekyll -v
 > * Ruby ✔️
 > * RubyGems ✔️
 > * GCC and Make (`gcc -v`, `g++ -v` and `make -v`) ❌
+> * 
 > But it is good to go anyways.
 
 ---
