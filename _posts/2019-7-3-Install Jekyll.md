@@ -53,3 +53,7 @@ jekyll -v
 
 ## Next steps:
 * Read [Quickstart](https://jekyllrb.com/docs/) and [Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
+
+---
+
+Hum, I found I could not run the commands in Powersheel. I should go back to the [book](https://learnpythonthehardway.org/book/appendixa.html) and stop playing with my page for a while :sob:. Man, you are unemployed now! Learn and do something useful！
