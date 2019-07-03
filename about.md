@@ -12,7 +12,7 @@ layout: page
 
 <ul class="skill-list">
 	<li><b>Data science</b>: querying, web-scraping, cleaning, manipulating, modeling, visualizing, reporting</li>
-	<li><b>Regression</b>: regression, GLM, multilevel models, multivariate analysis (PCA/LDA)</li>
+	<li><b>Modeling</b>: regression, GLM, multilevel models, multivariate analysis (PCA/LDA)</li>
 	<li><b>Machine learning</b>: KNN, spline, cluster, tree, kernel machine, model selection and regularization</li>
 	<li><b>Data science</b>: R-Shiny (<a href="https://lobs.shinyapps.io/H1B_map/">shiny app</a>), Tableau</li>
 </ul>
