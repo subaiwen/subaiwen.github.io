@@ -24,22 +24,22 @@ ni $(1..52 | %{"ex$_\ex$_.py"}) -f
 ```
 52 exercises in total. Create 52 empty **.py** files in 52 folds for each exercise. \
 
-> `ni = New-Item`    
-> `-f = -Force`
+>`ni = New-Item`    
+>`-f = -Force`
 
 👶
 ```bash
 ii ex1\ex1.py
 ```
 Open **ex1.py** in defualt software (sublime).
-> `ii = Invoke-Item`
+>`ii = Invoke-Item`
 
 👶
 ```bash
 python -m pydoc sys
 ```
 Get Python help file for **sys**.
-> `-m`: module
+>`-m`: module
 
 👶
 ```bash
@@ -47,5 +47,5 @@ echo "A text file with some text" > ex1\ex1.txt
 type ex1\ex1.txt
 ```
 Create a text file with some text in it.
-> `echo`: Sends the specified objects to the next command in the pipeline.  
-> `type`/`more`： print out the file
+>`echo`: Sends the specified objects to the next command in the pipeline.  
+>`type`/`more`： print out the file
