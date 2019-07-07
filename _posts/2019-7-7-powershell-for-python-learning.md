@@ -15,22 +15,26 @@ description: Powershell
 ## Overview:
 Powershell commands I used when learning [Python](https://learnpythonthehardway.org/python3/)
 
-## Commands:
+---
 
+## Commands:
+👶
 ```bash
 ni $(1..52 | %{"ex$_\ex$_.py"}) -f
 ```
 52 exercises in total. Create 52 empty **.py** files in 52 folds for each exercise. \
 
-> **ni** = **New-Item**
-> **-f** = **-Force**
+> `ni` = `New-Item`    
+> `-f` = `-Force`
 
+👶
 ```bash
 ii ex1\ex1.py
 ```
 Open **ex1.py** in defualt software (sublime).
-> **ii** = **Invoke-Item**
+> `ii` = `Invoke-Item`
 
+👶
 ```bash
 python -m pydoc sys
 ```
