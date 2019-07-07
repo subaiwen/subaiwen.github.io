@@ -13,7 +13,7 @@ description: Powershell
 ---
 
 ## Overview:
-Powershell commands I used when learning [Python](https://learnpythonthehardway.org/python3/)
+Powershell commands I used when learning [Python](https://learnpythonthehardway.org/python3/).
 
 ---
 
