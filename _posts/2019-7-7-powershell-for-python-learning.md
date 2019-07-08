@@ -39,7 +39,7 @@ Open **ex1.py** in defualt software (sublime).
 python -m pydoc sys
 ```
 Get Python help file for **sys**.
->`-m`: module
+>`-m: module`
 
 👶
 ```bash
@@ -47,5 +47,5 @@ echo "A text file with some text" > ex1\ex1.txt
 type ex1\ex1.txt
 ```
 Create a text file with some text in it.
->`echo`: Sends the specified objects to the next command in the pipeline.  fuck
+>`echo`: Sends the specified objects to the next command in the pipeline.  
 >`type`/`more`： print out the file
