@@ -5,7 +5,7 @@ layout: page
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
 <hr>
-<p>I currently graduated from American University with Master's Degree of Statistics. In the next 2-3 years, I see myself pursuing a Ph.D degree of <b>Data Science</b> or <b>Computer Science</b>. I am really into delicious food, so I am passionate about trying new recipes and dinning out in good restaurants. Please feel free to share me nice recipes and restaurants. 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤
+<p>I currently graduated from American University with Master's Degree of Statistics. In the next 2-3 years, I see myself pursuing a Ph.D degree of <b>Data Science</b> or <b>Computer Science</b>. I am really into delicious food, so I am passionate about trying new recipes and dinning out in good restaurants. You are welcome to share me nice recipes and restaurants. 🍕 🍔 🍟 🍗 🍖 🍝 🍛 🍤
 </p>
 
 <hr>
