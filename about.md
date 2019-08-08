@@ -14,6 +14,7 @@ layout: page
 <ul>
 	<li>Shrimp  🍤</li>
 	<li>Orange egg 🥚</li>
+	<li>Crème brûlée 🍮</li>
 	<li>Sautéed beef with Bamboo Shoots 🐮</li>
 	<li>Sautéed lobster with ginger and scallions 🦞</li>
 	<li>Sautéed sea cucumber muscle with yellow chives  </li>
