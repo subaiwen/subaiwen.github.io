@@ -45,8 +45,9 @@ Still, there are a lot of things to improve✔️:
 >[Solution from underdogliu](https://github.com/sergiokopplin/indigo/issues/388), you need to register you website to disqus
 * I want to keep 'subject' to show my experience and coursework. But most of the work were recorded in **Rmarkdown**, **Html** or **Tex**. So I will need a tool ([Pandoc](https://pandoc.org/index.htm)) to convert the files to **Markdown** (If **Markdown** is the only file format to use). ❌
 * I want to add a section about 'food'. I could change the name of 'project'. (I disable 'subject' for now) ❌
-* I also want a rating area above the comment area.✔️ 
+* I also want a reaction section beyond the comments.✔️ 
 > It is a feature under disqus.
+
 ![](http://ww2.sinaimg.cn/large/006tNc79ly1g4ld205l9zj30za07w3zg.jpg)
 * Enable page search.❌
 
