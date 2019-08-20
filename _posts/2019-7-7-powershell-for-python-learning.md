@@ -20,6 +20,16 @@ Powershell commands I used when learning [Python](https://learnpythonthehardway.
 ## Commands:
 👶
 ```bash
+cd ~\Documents\Github\Learn-py-hard-way
+# cd ~: go back home
+ls 
+cd ex1
+cd ..
+# move up in the tree/path
+```
+
+👶
+```bash
 ni $(1..52 | %{"ex$_\ex$_.py"}) -f
 ```
 52 exercises in total. Create 52 empty **.py** files in 52 folds for each exercise. \
