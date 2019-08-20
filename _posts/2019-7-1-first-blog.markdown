@@ -10,6 +10,7 @@ tag:
 category: blog
 author: subaiwen
 description: The way to build up personal webpage
+comments: true
 ---
 
 ## Overview:
