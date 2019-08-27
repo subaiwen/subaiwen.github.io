@@ -9,7 +9,7 @@ tag:
 - Model
 category: blog
 author: subaiwen
-description: Modeling: Variable transformation
+description: Variable transformation
 ---
 
 ## Overview:
