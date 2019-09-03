@@ -52,7 +52,7 @@ jekyll -v
 ---
 
 ## Next steps:
-* Read [Quickstart](https://jekyllrb.com/docs/) and [Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/), [Cheatsheet](https://devhints.io/jekyll)
+* Read [Quickstart](https://jekyllrb.com/docs/) and [Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/), [Cheatsheet](https://devhints.io/jekyll), [Rmarkdown support](https://bookdown.org/yihui/blogdown/jekyll.html)
 
 ---
 
