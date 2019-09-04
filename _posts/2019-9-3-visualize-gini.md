@@ -1,6 +1,7 @@
 ---
 title: "Visualization: Gini Index"
 layout: post
+date: 2019-09-03 20:03
 image: /assets/images/favicon/GitHub-Mark.png
 headerImage: false
 tag:
@@ -8,7 +9,6 @@ tag:
 - bar chart
 - Visualization
 - Sapply
-projects: true
 category: blog
 author: subaiwen
 description: Data Visualization for Gini Index
