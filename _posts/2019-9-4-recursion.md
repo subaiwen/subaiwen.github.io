@@ -13,7 +13,7 @@ author: subaiwen
 description: Algorithm for recursion applied to edit distance
 ---
 
-## Recursion:
+## 1. Recursion:
 Recursive: the algorithm recurs. i.e. the solution is built up of solutions to smaller parts of the same problem.  
 A key feature is the “base case” where you can solve the problem in a straightforward way, without further reductions.  
 For example, applying recursion to define a function of factorial of n (n!):  
@@ -28,7 +28,7 @@ def fact(n):
 		return float('inf')
 ```
 
-## Edit distance (Levenstein distance)
+## 2. Edit distance (Levenstein distance)
 ### Definition
 The edit distance or Levenstein distance, $d_{Edit}(s,t)$, between two strings s and t is the minimum number of edit operations required to transform s into t.  
 
@@ -131,7 +131,7 @@ def edit_dist(s, t):
 
 ---
 
-### Reference
+## Reference
 [Advanced Bash-Scripting Guide: Chapter 3. Special Characters](https://www.tldp.org/LDP/abs/html/special-chars.html)  
 [the single underscore “_” variable in Python?](https://stackoverflow.com/questions/5893163/what-is-the-purpose-of-the-single-underscore-variable-in-python)
 
