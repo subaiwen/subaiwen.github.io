@@ -16,7 +16,7 @@ description: Algorithm for recursion applied to edit distance
 ## 1. Recursion:
 Recursive: the algorithm recurs. i.e. the solution is built up of solutions to smaller parts of the same problem.  
 A key feature is the “base case” where you can solve the problem in a straightforward way, without further reductions.  
-For example, applying recursion to define a function of factorial of n (n!):  
+For example, applying recursion to define a function of factorial of n ($n!$):  
 
 ```python
 def fact(n):
@@ -30,7 +30,7 @@ def fact(n):
 
 ## 2. Edit distance (Levenstein distance)
 ### Definition
-The edit distance or Levenstein distance, $d_{Edit}(s,t)$, between two strings s and t is the minimum number of edit operations required to transform s into t.  
+The edit distance or Levenstein distance, $d_{Edit}(s,t)$, between two strings $s$ and $t$ is the minimum number of edit operations required to transform $s$ into $t$.  
 
 An edit operation:
 
@@ -47,7 +47,7 @@ So the edit distance for the strings “PRETTY” and “PROTEIN” is 4.
 ### Theorem
 It is possible express the edit distance recursively:
 
-* The base case is when either of $s$ or $t$ has zero length. In this case, the other string must have been formed from entirely from insertions. So the edit distance must be the length of the length of the (possibly) non-empty string.
+* The base case is when either of $s$ or $t$ has zero length. In this case, the other string must have been formed from entirely from insertions. So the edit distance must be the length of the (possibly) non-empty string.
 * For the recursive case, we have to consider 2 possibilities:  
 (1) The first characters of $s$ and $t$ are a match. In this case, the edit distance $d_{Edit}(s,t)$ is the same as $d_{Edit}(s′,t′)$ where $s′$ and $t′$ are the strings $s$, $t$ with the first character removed.  
 (2) The first characters $s$ and $t$ do not match. In this case, the edit distance $d_{Edit}(s,t)$ is the minimum of
@@ -114,9 +114,10 @@ plt.show()
 
 ```  
 - `string.ascii_uppercase`: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'  
-- `choice(alphabet)`: randomly choose a character from alphabet  
-- `[ choice(alphabet) for _ in range(len)])`: create a list of random characters with the same length as `len` ( `_`: [throwaway index](https://stackoverflow.com/questions/5893163/what-is-the-purpose-of-the-single-underscore-variable-in-python) )  
-- `"".join()` : make a string out of the list, seperated with `""`
+- `choice(alphabet)`: randomly choose a character from alphabet.  
+- `[choice(alphabet) for _ in range(len)]`: create a list of random characters with the same length as `len`.  
+`_`: [throwaway index](https://stackoverflow.com/questions/5893163/what-is-the-purpose-of-the-single-underscore-variable-in-python) 
+- `"".join()` : make a string out of the list, seperated with `""`.
 
 #### Speed up
 Wrap `edit_dist` with the memoizer `lru_cache` from the `functools` library. We can just modify the `edit_distance.py` file by adding two lines at the beginning:
