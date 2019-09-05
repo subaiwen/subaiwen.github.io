@@ -50,6 +50,7 @@ Still, there are a lot of things to improve✔️:
 * Enable page search ❌
 * Enable LaTex in markdown ✔️  
 > [Solution](http://zjuwhw.github.io/2017/06/04/MathJax.html)
+* Change code chunk style ❌ (🔗)[https://github.com/sergiokopplin/indigo/issues/214]
 
 To achieve these features, I might need to modify the template. Some extra skill to equip:
 * [jekyll](https://jekyllrb.com/), [中文](https://www.jekyll.com.cn/)
