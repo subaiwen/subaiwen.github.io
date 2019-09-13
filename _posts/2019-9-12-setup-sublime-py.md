@@ -99,6 +99,8 @@ Save this file as new-python.sublime-build
 Go to Tools -> Build System -> Python  
 Press **CTRL + B** to run the code on Sublime
 
+---
+
 ## Terminal
 [Terminus](https://packagecontrol.io/packages/Terminus)
 
