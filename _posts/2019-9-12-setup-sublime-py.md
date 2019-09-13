@@ -66,6 +66,7 @@ Preferences -> Package Settings -> Anaconda -> Settings-User
     "mypy": true,
 }
 ```
+[Disable Anaconda linting](https://www.youtube.com/watch?v=4lJ-RdwV3sQ)
 
 #### 5. SublimeLinter-contrib-mypy
 [Instruction](https://github.com/fredcallaway/SublimeLinter-contrib-mypy):  
