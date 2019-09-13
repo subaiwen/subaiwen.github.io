@@ -1,7 +1,7 @@
 ---
 title: "Set up Sublime Text 3 for Python"
 layout: post
-date: 2019-09-012 21:58
+date: 2019-09-12 21:58
 image: /assets/images/favicon/GitHub-Mark.png
 headerImage: false
 tag:
