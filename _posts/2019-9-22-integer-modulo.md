@@ -16,7 +16,7 @@ description: Ring of integers modulo n in python
 In the ring $Z/nZ$, “the integers modulo n”, the elements of $Z/nZ$ are equivalence classes of integers; two integers are considered equivalent in $Z/nZ$ if they differ by some number of copies of n.  
 When we let n=4, there are 4 classes: 4k, 1 + 4k, 2 + 4k, and 3 + 4k. The arithmetic tables are then:  
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g78a75v4gtj30yu09c750.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g78a75v4gtj30yu09c750.jpg" width="500">
 </p>
 The task to implement a class `IntMod` which supports the relevant arithmetic operations in python: +, -, *, and /.
 
@@ -76,8 +76,7 @@ def unit(self):
 ```
 
 #### 3. Inverse
-If the divisor is a unit, division can be defined. But we cannot directly compute $a/b$ under modulo $n$, since it may give us float numbers. We do a little trick here:  
-$$ \frac{a}{b} \; \% \; n = (\:inverse(b) \; * \; a\:) \; \% \; m$$
+If the divisor is a unit, division can be defined. But we cannot directly compute $a/b$ under modulo $n$, since it may give us float numbers. We do a little trick here: $$ \frac{a}{b} \; \% \; n = (\:inverse(b) \; * \; a\:) \; \% \; m$$  
 So we can ensure a integer output of the division. To find the inverse:  
 
 ```python
@@ -129,7 +128,7 @@ print(pd.DataFrame(
 	columns = [i for i in range(36)]))
 ```
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g78bfld5lwj30ve0sw7ke.jpg" width="450">
+  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g78bfld5lwj30ve0sw7ke.jpg" width="500">
 </p>
 
 ---
