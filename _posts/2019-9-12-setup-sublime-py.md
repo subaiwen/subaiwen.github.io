@@ -81,22 +81,23 @@ mypy: errorNo library stub file for module 'numpy'
 mypy: note(Stub files are from https://github.com/python/typeshed)
 ```
 That's because Numpy does not have stable type hints at this time.  
+
 Three ways to fix it:  
 
-1. Append `# type: ignore` after the module name:  
+* Append `# type: ignore` after the module name:  
 
 ```python
 import numpy as np  # type: ignore
 ```
 
-2. On the command line:  
+* On the command line:  
 
 ```python
 mypy --ignore-missing-import test.py
 ``` 
 This has the drawback that it will ignore mistakes as well (misspelling the package name, for example)
 
-3. We can create a `.mypy.ini` [configuration file](https://mypy.readthedocs.io/en/latest/config_file.html#the-mypy-configuration-file) in our home folder `~` (or a `mypy.ini` in the folder where our project is) with the following content:  
+* We can create a `.mypy.ini` [configuration file](https://mypy.readthedocs.io/en/latest/config_file.html#the-mypy-configuration-file) in our home folder `~` (or a `mypy.ini` in the folder where our project is) with the following content:  
 
 ```python
 # mypy.ini
