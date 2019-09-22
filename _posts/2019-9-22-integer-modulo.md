@@ -76,8 +76,8 @@ def unit(self):
 ```
 
 #### 3. Inverse
-If the divisor is a unit, division can be defined. But we cannot directly compute $a/b$ under modulo $n$, since it may give us float numbers. We do a little trick here: $$ \frac{a}{b} \; \% \; n = (\:inverse(b) \; * \; a\:) \; \% \; m$$  
-So we can ensure a integer output of the division. To find the inverse:  
+If the divisor is a unit, division can be defined. But we cannot directly compute $a/b$ under modulo $n$, since it may give us float numbers. We do a little trick here: $$ a/b \; \% \; n = (\:inverse(b) \; * \; a\:) \; \% \; m$$  
+So we can ensure an integer output of the division. To find the inverse:  
 
 ```python
 def inver(self):
