@@ -63,7 +63,7 @@ def table(self):
 ```
 
 #### 2. Unit
-Find the list of units:  
+In ring theory we say that an element $u$ of a ring $R$ is a unit if it has an inverse in $R$, that is, if there is another element $v\in R$ such that $uv=vu=1$. Find the list of units:  
 
 ```python
 def unit(self):
