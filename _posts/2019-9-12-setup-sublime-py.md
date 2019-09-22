@@ -73,6 +73,38 @@ Preferences -> Package Settings -> Anaconda -> Settings-User
 (1) Package Control -> Install Package -> SublimeLinter  
 (2) Package Control -> Install Package -> SublimeLinter-contrib-mypy  
 
+#### 6. mypy configuration file
+When importing third party module, `import numpy` for instance, it would pop up an error: 
+ 
+```
+mypy: errorNo library stub file for module 'numpy'
+mypy: note(Stub files are from https://github.com/python/typeshed)
+```
+That's because Numpy does not have stable type hints at this time.  
+Three ways to fix it:  
+
+1. Append `# type: ignore` after the module name:  
+
+```python
+import numpy as np  # type: ignore
+```
+
+2. On the command line:  
+
+```python
+mypy --ignore-missing-import test.py
+``` 
+This has the drawback that it will ignore mistakes as well (misspelling the package name, for example)
+
+3. We can create a `.mypy.ini` [configuration file](https://mypy.readthedocs.io/en/latest/config_file.html#the-mypy-configuration-file) in our home folder `~` (or a `mypy.ini` in the folder where our project is) with the following content:  
+
+```python
+# mypy.ini
+[mypy]
+[mypy-numpy]
+ignore_missing_imports = True
+```
+
 ---
 
 ## Run Python
@@ -105,4 +137,7 @@ Press **CTRL + B** to run the code on Sublime
 ## Terminal
 [Terminus](https://packagecontrol.io/packages/Terminus)
 
+---
 
+## Reference
+[Guide: Type Hinting in Python 3.5](https://kite.com/blog/python/type-hinting/)
