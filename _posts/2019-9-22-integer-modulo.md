@@ -63,7 +63,9 @@ def table(self):
 ```
 
 #### 2. Unit
-In ring theory we say that an element $u$ of a ring $R$ is a unit if it has an inverse in $R$, that is, if there is another element $v\in R$ such that $uv=vu=1$. Find the list of units:  
+> In ring theory we say that an element $u$ of a ring $R$ is a unit if it has an inverse in $R$, that is, if there is another element $v\in R$ such that $uv=vu=1$. 
+
+Find the list of units ($u$):  
 
 ```python
 def unit(self):
@@ -77,7 +79,7 @@ def unit(self):
 
 #### 3. Inverse
 If the divisor is a unit, division can be defined. But we cannot directly compute $a/b$ under modulo $n$, since it may give us float numbers. We do a little trick here: $$ a/b \; \% \; n = (\:inverse(b) \; * \; a\:) \; \% \; m$$  
-So we can ensure an integer output of the division. To find the inverse:  
+So we can ensure an integer output of the division. To find the inverse ($v$):  
 
 ```python
 def inver(self):
