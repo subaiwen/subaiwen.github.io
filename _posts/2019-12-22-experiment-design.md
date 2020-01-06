@@ -5,10 +5,7 @@ date: 2019-12-22 12:32
 image: /assets/images/favicon/GitHub-Mark.png
 headerImage: false
 tag:
-- Oracle
-- SQL
-- Data Query
-- Data Wrangling
+- Note
 category: blog
 author: subaiwen
 description: An intro to Experimental Design
@@ -23,9 +20,9 @@ description: An intro to Experimental Design
 - 实验设计：通过控制无关变量 (Block)，观察处理对客体造成的反应
 
 - 原则：  
-控制 (Control)：控制无关变量，纯粹地比较处理组间的差异  
-随机 (Randomize)：随机分配处理给实验对象  
-重复 (Replicate)：在充足的样本里重复性投放每种处理  
+- - 控制 (Control)：控制无关变量，纯粹地比较处理组间的差异  
+- - 随机 (Randomize)：随机分配处理给实验对象  
+- - 重复 (Replicate)：在充足的样本里重复性投放每种处理  
 
 ---
 # 流程
