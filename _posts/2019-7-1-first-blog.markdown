@@ -36,8 +36,19 @@ Everything, including **_config.yml**, **assets** fold and **about.md**, was smo
 
 I downloaded [github desktop](https://desktop.github.com/) to locally manage the files. After cloning the repo to the github desktop, you can change and edit the files in your computer, and then easily sync the repo by 1 or 2 clicks in the desktop app.
 
+### 4. ❗️
+- [Link to part of the article in Markdown](https://stackoverflow.com/questions/2822089/how-to-link-to-part-of-the-same-document-in-markdown): just one `#` for all heading sizes, no space (or any other punctuation) between # and anchor name, anchor tag names must be lowercase, and delimited by dashes if multi-word.
 
-### 4. 📋 Next steps
+```
+[click this go to 1. overview](#1-overview)
+
+### 1. overview
+```
+
+- Style files locate in `_sass` folder. Usually, you can change the article styling in `_sass/base/general.sass`. Styling parameters can be find in most css files online ([css table style generator](https://divtable.com/table-styler/)). You just need to delete `;` and `{}` in the css reference.
+
+
+### 5. 📋 Next steps
 
 Still, there are a lot of things to improve✔️:
 
