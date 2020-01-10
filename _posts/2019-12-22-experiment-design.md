@@ -6,6 +6,7 @@ image: /assets/images/favicon/GitHub-Mark.png
 headerImage: false
 tag:
 - Note
+- 中文
 category: blog
 author: subaiwen
 description: An intro to Experimental Design
