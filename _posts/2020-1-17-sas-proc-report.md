@@ -139,7 +139,7 @@ ods excel close;
 [**Demo: Transpose**](http://support.sas.com/resources/papers/proceedings14/SAS388-2014.pdf)
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2ywygvqj30n00bu0v2.jpg" width="600">
+  <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2ywygvqj30n00bu0v2.jpg" width="300">
 </p>
 
 ```SAS
@@ -152,7 +152,7 @@ run;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2zhu31uj30kw0a8gnr.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2zhu31uj30kw0a8gnr.jpg" width="300">
 </p>
 
 ---
