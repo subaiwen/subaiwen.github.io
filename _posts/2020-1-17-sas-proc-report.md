@@ -15,7 +15,6 @@ description: My notes of using SAS
 - [ODS: TAGSETS.EXCELXP VS. EXCEL](#ODS) 
 - [PROC REPORT](#proc-report)
 
-
 ---
 ## ODS
 ODS (Output Delivery System): delivers output in a variety of formats, including HTML, Rich Text Format (RTF), PostScript (PS), Portable Document Format (PDF), and SAS data sets.
@@ -152,7 +151,7 @@ run;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2zhu31uj30kw0a8gnr.jpg" width="300">
+  <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2zhu31uj30kw0a8gnr.jpg" width="200">
 </p>
 
 ---
@@ -162,4 +161,5 @@ run;
 - [Using the New ODS EXCEL Destination in SAS® 9.4](https://support.sas.com/resources/papers/proceedings17/0169-2017.pdf)
 - [Unleash the Power of PROC REPORT
 with the ODS EXCEL Destination](https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2479-2018.pdf)
+- [Beyond the Basics: Advanced PROC REPORT Tips and Tricks](https://support.sas.com/rnd/papers/sgf07/sgf2007-report.pdf)
 - [PROC REPORT STYLE IN HEADER](https://communities.sas.com/t5/ODS-and-Base-Reporting/PROC-REPORT-STYLE-IN-HEADER/td-p/91381)
