@@ -1,5 +1,5 @@
 ---
-title: "SAS: Visulization"
+title: "SAS: Visualization"
 layout: post
 date: 2020-02-11 22:18
 image: /assets/images/favicon/GitHub-Mark.png
