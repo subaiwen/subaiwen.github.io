@@ -13,18 +13,18 @@ description: My notes of using SAS
 
 ## Overview
 
-- [Single-Cell Plotting](#Single-Cell-Plotting)
-- - [One-Variable](#One-Variable)
-- - [Two-Variables](#Two-Variables)
-- - [Examples](#Examples-Single-Cell-Plotting)
+- [Single-Cell Plotting](#single-cell-plotting)
+- - [One-Variable](#1-one-variable)
+- - [Two-Variables](#2-two-variables)
+- - [Examples](#examples-single-cell-plotting)
 
-- [Multiple-Cell Plotting](#Multiple-Cell-Plotting)
-- - [SGPanel](#SGPANEL)
-- - [SGScatter](#SGSCATTER)
-- - [Examples](#Examples-Multiple-Cell-Plotting)
+- [Multiple-Cell Plotting](#multiple-cell-plotting)
+- - [SGPanel](#sgpanel)
+- - [SGScatter](#sgscatter)
+- - [Examples](#examples-multiple-cell-plotting)
 
-- [Reporting](#Reporting)
-- - [ODS LAYOUT](#ODS-LAYOUT)
+- [Reporting](#reporting)
+- - [ODS LAYOUT](#ods-layout)
 
 ---
 
@@ -39,7 +39,7 @@ PROC SGPLOT DATA = data-set <options>;
 RUN;
 ```
 
-### One Variable
+### 1. One Variable
 #### Continuous
 
 | Plot      | Syntax						                    |
@@ -55,7 +55,7 @@ RUN;
 | Bar Chart | `HBAR var </ OPTIONS>;`<br>`VBAR var </ OPTIONS>;` |
 
 
-### Two Variables
+### 2. Two Variables
 #### continuous x, continuous y
 
 | Plot      | Syntax						                    |
