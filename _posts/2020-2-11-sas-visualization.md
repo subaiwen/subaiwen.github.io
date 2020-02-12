@@ -12,8 +12,19 @@ description: My notes of using SAS
 ---
 
 ## Overview
+
 - [Single-Cell Plotting](#Single-Cell-Plotting)
+- - [One-Variable](#One-Variable)
+- - [Two-Variables](#Two-Variables)
+- - [Examples](#Examples-Single-Cell-Plotting)
+
 - [Multiple-Cell Plotting](#Multiple-Cell-Plotting)
+- - [SGPanel](#SGPANEL)
+- - [SGScatter](#SGSCATTER)
+- - [Examples](#Examples-Multiple-Cell-Plotting)
+
+- [Reporting](#Reporting)
+- - [ODS LAYOUT](#ODS-LAYOUT)
 
 ---
 
@@ -28,7 +39,7 @@ PROC SGPLOT DATA = data-set <options>;
 RUN;
 ```
 
-### 1. One Variable
+### One Variable
 #### Continuous
 
 | Plot      | Syntax						                    |
@@ -44,7 +55,7 @@ RUN;
 | Bar Chart | `HBAR var </ OPTIONS>;`<br>`VBAR var </ OPTIONS>;` |
 
 
-### 2. Two Variables
+### Two Variables
 #### continuous x, continuous y
 
 | Plot      | Syntax						                    |
@@ -81,12 +92,7 @@ RUN;
 ### 3. Maps
 
 
-## Multiple-Cell Plotting
-
-
----
-
-## Examples
+### Examples (Single-Cell Plotting)
 **Histogram:** 
  
 ```SAS
@@ -99,7 +105,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbst4kgnpvj30zc0qeacl.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbst4kgnpvj30zc0qeacl.jpg" width="530">
 </p>
 
 **Bar Chart:**
@@ -111,7 +117,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsuzoqz7qj30ze0qedho.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsuzoqz7qj30ze0qedho.jpg" width="530">
 </p>
 
 **High-Low:**
@@ -124,7 +130,7 @@ run;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsqa32rsfj30z80q8dhy.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsqa32rsfj30z80q8dhy.jpg" width="530">
 </p>
 
 **Bubble:**
@@ -136,7 +142,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbst6fsmt7j30zc0qggox.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbst6fsmt7j30zc0qggox.jpg" width="530">
 </p>
 
 **Scatter:**
@@ -154,7 +160,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsswdmij2j30zc0qcn0i.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsswdmij2j30zc0qcn0i.jpg" width="530">
 </p>
 
 **Dot Plot:**
@@ -170,7 +176,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsxlgmt1dj30ze0qggnz.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsxlgmt1dj30ze0qggnz.jpg" width="530">
 </p>
 
 **Series:**
@@ -183,7 +189,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbstuogi7ej30ze0qg11r.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbstuogi7ej30ze0qg11r.jpg" width="530">
 </p>
 
 **Line Chart:**
@@ -196,7 +202,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsvgd0yjwj30zg0qijuh.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsvgd0yjwj30zg0qijuh.jpg" width="530">
 </p>
 
 **Regression:**
@@ -210,7 +216,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsu65fecoj30zc0qin2z.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsu65fecoj30zc0qin2z.jpg" width="530">
 </p>
 
 **Box Plot:**
@@ -223,7 +229,7 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsulnp8e1j30zg0qi778.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsulnp8e1j30zg0qi778.jpg" width="530">
 </p>
 
 **Heat Map:**
@@ -235,10 +241,157 @@ RUN;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsv9lqqa1j30ze0qeag4.jpg" width="400">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsv9lqqa1j30ze0qeag4.jpg" width="530">
 </p>
 
+---
 
+## Multiple-Cell Plotting
+### SGPANEL
+The SGPANEL procedure creates a panel of graph cells for the values of one or more classification variables. For example, if a data set contains three variables (A, B and C) and you want to compare the scatter plots of B*C for each value of A, then you can use the SGPANEL procedure to create this panel. The SGPANEL procedure creates a layout for you automatically and splits the panel into multiple graphs if necessary.
+
+**Syntax:**  
+ 
+```SAS
+PROC SGPANEL DATA=data <options>;
+	PANELBY var;
+	<options>;
+	<graph> ...;
+RUN;
+```
+
+### SGSCATTER
+The SGSCATTER procedure creates a paneled graph of scatter plots for multiple combinations of variables, depending on the plot statement that you use.
+
+**Syntax:**
+
+```SAS
+PROC SGSCATTER DATA=data <options>;
+	<statement>
+RUN;
+```
+
+### Examples (Multiple-Cell Plotting)
+
+**SGPanel:**
+
+```SAS
+TITLE1 "PRODUCT SALES";
+PROC SGPANEL DATA=SASHELP.PRDSALE;
+  PANELBY quarter;
+  ROWAXIS LABEL="sales";
+  VBAR product / RESPONSE=predict STAT=mean
+                 TRANSPARENCY=0.3;
+  VBAR product / RESPONSE=actual STAT=mean
+                 BARWIDTH=0.5 TRANSPARENCY=0.3;
+RUN; 
+TITLE1;
+```
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtpq9wh7fj30u00u0n1o.jpg" width="530">
+</p>
+
+```SAS
+title1 "Distribution of Cholesterol Levels";
+PROC SGPANEL DATA=sashelp.heart;
+  PANELBY weight_status sex / LAYOUT=lattice
+                              NOVARNAME;
+  HBOX cholesterol;
+RUN; 
+title1;
+```
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtqi9eydwj30z80qggoc.jpg" width="530">
+</p>
+
+**SGScatter:**
+
+```SAS
+PROC SGSCATTER DATA=sashelp.cars;
+  COMPARE Y=mpg_highway
+          X=(weight enginesize horsepower)
+          / GROUP=type;
+RUN;
+```
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtr35a4ytj30ze0qin2n.jpg" width="530">
+</p>
+
+```SAS
+PROC SGSCATTER DATA=sashelp.iris
+               (WHERE=(species EQ "Virginica"));
+MATRIX PETALLENGTH PETALWIDTH SEPALLENGTH
+       / ELLIPSE=(TYPE=mean)
+         DIAGONAL=(HISTOGRAM KERNEL);
+RUN;
+```
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtr6dxs82j30u20u0jxe.jpg" width="530">
+</p>
+
+---
+
+## Reporting
+### ODS LAYOUT
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtovkble9j30ey0h2gmr.jpg" width="280">
+</p>
+
+**ODS LAYOUT ABSOLUTE:**  
+Absolute layout is perfectly suited for static types of output that can be printed on a single page where you want output placed in a specific location.
+
+```SAS
+ODS LAYOUT ABSOLUTE <options>;
+   ODS REGION;
+      ...;
+      
+   ODS REGION;
+      ...;
+ODS LAYOUT END;
+```
+
+**ODS LAYOUT GRIDDED:**  
+Gridded layout for dynamically sized regions can accommodate dynamic data, can span more than one page, and allows for easier alignment. Programs created using gridded layout are easier to maintain than those created using absolute layout.
+
+```SAS
+ODS LAYOUT GRIDDED ROWS=n-row COLUMNS=n-col <options>;
+   ODS REGION ROW=row-index COLUMN=col-index;
+      ...;
+      
+   ODS REGION ROW=row-index COLUMN=col-index;
+      ...;
+ODS LAYOUT END;
+```
+
+
+### Examples
+**ODS LAYOUT GRIDDED:**
+
+```SAS
+OPTIONS NONUMBER NODATE;
+ODS PDF FILE='test.pdf';
+TITLE 'THIS IS TITLE1';
+FOOTNOTE 'THIS IS FOOTNOTE1';
+ODS LAYOUT GRIDDED;
+
+ODS REGION ROW=1 COLUMN=1;
+TITLE 'THIS IS THE REGION TITLE';
+FOOTNOTE 'THIS IS THE REGION FOOTNOTE';
+PROC PRINT DATA=sashelp.class(OBS=10);
+RUN;
+
+ODS REGION ROW=2 COLUMN=1 WIDTH=3in;
+PROC SGPLOT DATA=sashelp.stocks;
+    TITLE "Stock Prices 1986-2005"; 
+    SERIES X=date Y=close / GROUP=stock GROUPLP=stock;
+RUN; 
+
+ODS LAYOUT END;
+ODS PDF CLOSE; 
+```
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtokgsyfxj30u010e0y7.jpg" width="580">
+</p>
 
 ---
 
@@ -261,5 +414,7 @@ RUN;
 - [SAS-blogs::SGPLOT](https://blogs.sas.com/content/?s=sgplot)
 
 ### Multiple-Cell
-- ODS LAYOUT, ODS REGION
-- SGSCATTER, SGPANEL
+- [ODS Layout Tip Sheet](http://support.sas.com/rnd/base/ods/Tipsheet_ods_layout.pdf)
+- [ODS LAYOUT Overview](https://documentation.sas.com/?docsetId=odsug&docsetTarget=p0z7mlae4n6vf7n1ldq07tigzuqh.htm&docsetVersion=9.4&locale=en)
+- [SGPANEL Procedure](https://documentation.sas.com/?docsetId=grstatproc&docsetVersion=9.4&docsetTarget=p17wwoehcyc6mxn1hpcgxy8ixw6w.htm&locale=en)
+- [SGSCATTER Procedure](https://documentation.sas.com/?docsetId=grstatproc&docsetVersion=9.4&docsetTarget=p0lfzklhx36ylln1t9sssgzuf64m.htm&locale=en)
