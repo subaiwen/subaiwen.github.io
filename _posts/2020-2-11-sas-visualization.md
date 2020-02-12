@@ -13,18 +13,21 @@ description: My notes of using SAS
 
 ## Overview
 
-- [Single-Cell Plotting](#single-cell-plotting)
-- - [One-Variable](#1-one-variable)
-- - [Two-Variables](#2-two-variables)
-- - [Examples](#examples-single-cell-plotting)
+[**Single-Cell Plotting**](#single-cell-plotting)
 
-- [Multiple-Cell Plotting](#multiple-cell-plotting)
-- - [SGPanel](#sgpanel)
-- - [SGScatter](#sgscatter)
-- - [Examples](#examples-multiple-cell-plotting)
+- [One-Variable](#1-one-variable)
+- [Two-Variables](#2-two-variables)
+- [Examples](#examples-single-cell-plotting)
 
-- [Reporting](#reporting)
-- - [ODS LAYOUT](#ods-layout)
+[**Multiple-Cell Plotting**](#multiple-cell-plotting)
+
+- [SGPanel](#sgpanel)
+- [SGScatter](#sgscatter)
+- [Examples](#examples-multiple-cell-plotting)
+
+[**Reporting**](#reporting)
+
+- [ODS LAYOUT](#ods-layout)
 
 ---
 
@@ -48,7 +51,7 @@ RUN;
 | Density   | `Density var </ OPTIONS>;`                    |
 | Box Plot  | `HBOX var </ OPTIONS>;`<br>`VBOX var </ OPTIONS>;`|
 
-#### Descrete
+#### Discrete
 
 | Plot      | Syntax						                    |
 |-----------|-----------------------------------------------|
@@ -56,7 +59,7 @@ RUN;
 
 
 ### 2. Two Variables
-#### continuous x, continuous y
+#### Continuous x, Continuous y
 
 | Plot      | Syntax						                    |
 |-----------|-----------------------------------------------|
@@ -71,7 +74,7 @@ RUN;
 | Needle    | `NEEDLE X=x-var Y=y-var </ options>; `|
 
 
-#### discrete x, continuous y
+#### Discrete x, Continuous y
 
 | Plot      | Syntax						                    |
 |-----------|-----------------------------------------------|
@@ -82,7 +85,7 @@ RUN;
 | Donut    | `PROC SGPIE`<br>`DONUT x-var / RESPONSE=y-var </ OPTIONS>;`|
 
 
-#### discrete x , discrete y
+#### Discrete x , Discrete y
 
 | Plot      | Syntax						                    |
 |-----------|-----------------------------------------------|
@@ -90,7 +93,7 @@ RUN;
 | Text		  | `TEXT X=x-var Y=y-var TEXT=y-var </ options>; `|
 
 ### 3. Maps
-
+To be continued ...
 
 ### Examples (Single-Cell Plotting)
 **Histogram:** 
@@ -418,3 +421,8 @@ ODS PDF CLOSE;
 - [ODS LAYOUT Overview](https://documentation.sas.com/?docsetId=odsug&docsetTarget=p0z7mlae4n6vf7n1ldq07tigzuqh.htm&docsetVersion=9.4&locale=en)
 - [SGPANEL Procedure](https://documentation.sas.com/?docsetId=grstatproc&docsetVersion=9.4&docsetTarget=p17wwoehcyc6mxn1hpcgxy8ixw6w.htm&locale=en)
 - [SGSCATTER Procedure](https://documentation.sas.com/?docsetId=grstatproc&docsetVersion=9.4&docsetTarget=p0lfzklhx36ylln1t9sssgzuf64m.htm&locale=en)
+
+### Interactive Dashboard
+JMP  
+SAS®Visual Analytics  
+[Excel](https://www.youtube.com/watch?v=K74_FNnlIF8)
