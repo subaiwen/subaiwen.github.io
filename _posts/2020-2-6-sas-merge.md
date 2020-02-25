@@ -26,8 +26,11 @@ PROC APPEND BASE=base-data-set DATA=append-data-set <FORCE>;
 RUN;
 ```
 
-- In `PROC APPEND` step, SAS does not read the observations in the `BASE`. Also, SAS cannot change any variable information in the [descriptor portion](https://www.sas.com/content/dam/SAS/en_ca/User%20Group%20Presentations/TASS/Capan-Descriptor.pdf) of the `BASE`
+- In `PROC APPEND` step, SAS does not read the observations in the `BASE`. Also, SAS cannot change any variable information in the [descriptor portion](https://www.sas.com/content/dam/SAS/en_ca/User%20Group%20Presentations/TASS/Capan-Descriptor.pdf) of the `BASE`.
 - The `FORCE` options causes SAS to drop the extra variables in `DATA`, and then to issue a warning message to the log.
+- `PROC APPEND` does not require the base data set to exist before creation.
+
+> Try `PROC APPEND BASE=testR12345 DATA=sashelp.class;RUN;`
 
 ### 2. SET
 **Syntax:**
