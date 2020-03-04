@@ -80,8 +80,9 @@ QUIT;
 
 ```SAS
 DATA _NULL_;
-	CALL SYMPUT(macro_var, value);
+	CALL SYMPUT('macro_var', value);
 RUN;
+%PUT &macro_var;
 ```
 
 
