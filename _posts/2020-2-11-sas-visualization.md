@@ -92,7 +92,12 @@ RUN;
 | Bubble	  | `BUBBLE X=x-var Y=y-var </ options>; `        |
 | Text		  | `TEXT X=x-var Y=y-var TEXT=y-var </ options>; `|
 
-### 3. Maps
+### 3. Axis table
+From SAS 9.4, you can start using [Axistable statement](https://documentation.sas.com/?docsetId=grstatgraph&docsetTarget=p0v5nj3waz75w4n1s2y70echq6im.htm&docsetVersion=9.4&locale=en) which can generate an annotation table alongside the axis. For example, [Box plot with axistable](https://blogs.sas.com/content/graphicallyspeaking/2015/12/23/box-plot-with-stat-table-and-markers/).    
+
+If you are using SAS 9.3, the trick would be [creating an annotation table](https://blogs.sas.com/content/graphicallyspeaking/2012/06/25/graphical-swiss-army-knife/) before plotting. For example, [Risk tables, annotated or not](https://blogs.sas.com/content/graphicallyspeaking/2012/07/15/risk-tables-annotated-or-not/).
+
+### 4. Maps
 To be continued ...
 
 ### Examples (Single-Cell Plotting)
@@ -103,7 +108,7 @@ PROC SGPLOT DATA=sashelp.pricedata;
 	TITLE "This is the tile";
 	WHERE REGIONNAME = 'Region1';
 	HISTOGRAM PRICE /BINWIDTH=10 DATALABEL=count FILLATTRS=(COLOR='#CDCDCD');
-	DENSITY price/ TRANSPARENCY=0.7 LINEATTRS=(COLOR='#3F3059');
+	DENSITY price/ TRANSPARENCY=0.7 LINEATTRS=(COLOR='#3F3059'); /* type = kernel */
 RUN;
 ```
 
@@ -114,13 +119,25 @@ RUN;
 **Bar Chart:**
 
 ```SAS
-PROC SGPLOT DATA=sashelp.cars(WHERE= (make in ('Acura', 'Volvo') ));
-	HBAR type/ RESPONSE=mpg_city GROUP=drivetrain STAT=mean;
-RUN;
+data test;
+	set sashelp.burrows;
+	if status = -1 or missing(status) then status = 1;
+	if z < 531 or missing(z) then a = 'A';
+	if z >= 531 then a = 'B';
+run;
+* frequency table;
+proc freq data=test;
+	tables a*status/ out=test1 outpct;
+run;
+proc sgplot data=test1;
+	vbar status / response=pct_col group=a barwidth=0.4;
+	xaxistable pct_col/ x = status ;
+	keylegend/ location=outside position=topright;
+run;
 ```
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbsuzoqz7qj30ze0qedho.jpg" width="530">
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gclrxbs86yj30ze0qetay.jpg" width="530">
 </p>
 
 **High-Low:**
@@ -375,6 +392,7 @@ OPTIONS NONUMBER NODATE;
 ODS PDF FILE='test.pdf';
 TITLE 'THIS IS TITLE1';
 FOOTNOTE 'THIS IS FOOTNOTE1';
+/* Page 1 in the PDF*/
 ODS LAYOUT GRIDDED;
 
 ODS REGION ROW=1 COLUMN=1;
@@ -390,6 +408,7 @@ PROC SGPLOT DATA=sashelp.stocks;
 RUN; 
 
 ODS LAYOUT END;
+/* End of Page 1 */
 ODS PDF CLOSE; 
 ```
 <p align="center">
