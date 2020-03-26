@@ -24,11 +24,12 @@ Basic ODS syntax:
 
 ```SAS
 ODS TRACE ON </<options>>; 
-ODS destination <FILE=filename>; 
-ODS OUTPUT output-object-name=SAS-data-set-name; 
-ODS <destination>SELECT output-object-name|ALL|NONE; 
-... PROC ...
-ODS <destination> CLOSE;  ODS TRACE OFF; 
+	ODS <destination> <FILE=filename>; 
+	ODS OUTPUT output-object-name=SAS-data-set-name; 
+	ODS <destination> SELECT output-object-name|ALL|NONE; 
+		... PROC ...
+	ODS <destination> CLOSE;  
+ODS TRACE OFF; 
 ```
 
 - **Destinations**: ODS can be used to route quality presentation files to various destinations, including LISTING (default), HTML, RTF, PRINTER, and PDF.
@@ -80,11 +81,11 @@ ODS tagsets.excelxp file="test.xml" options(doc="help");
 ```SAS
 ods tagsets.excelxp path="/path/" file="excelxp.xls" style=printer options(header_data_associations="yes" autofit_height='yes')
 options(embedded_titles="yes" embedded_footnotes='yes' absolute_column_width="37,9,9");
-proc report data=section1 nowd spanrows split='|' style(header)=[fontweight=bold fontsize=10pt font=(Times, 8pt) ] ;
+proc report data=section1 nowd spanrows split='|' style(header)=[fontweight=bold fontsize=10pt font=(Times, 8pt)];
 column name ("Special Census" number pc);
-define name / "Subject" f=$table1f. font=(TimesNewRoman, 10pt)];
-define number / 'Number' style(column)=[tagattr="format:#,##0" font=(TimesNewRoman, 10pt)] ; 
-define pc / 'Percent' style(column)=[tagattr="format:##0.0" font=(TimesNewRoman, 10pt)] ;
+	define name / "Subject" f=$table1f. font=(TimesNewRoman, 10pt)];
+	define number / 'Number' style(column)=[tagattr="format:#,##0" font=(TimesNewRoman, 10pt)] ; 
+	define pc / 'Percent' style(column)=[tagattr="format:##0.0" font=(TimesNewRoman, 10pt)] ;
 ```
 
 <p align="center">
