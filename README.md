@@ -4,6 +4,6 @@
 
 <p align="center">🍖 This is my personal page. 🔗 https://subaiwen.github.io/</p>
 
-***
+
 
 🍜 Fork from http://koppl.in/indigo/
