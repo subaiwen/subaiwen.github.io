@@ -164,3 +164,8 @@ run;
 with the ODS EXCEL Destination](https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2479-2018.pdf)
 - [Beyond the Basics: Advanced PROC REPORT Tips and Tricks](https://support.sas.com/rnd/papers/sgf07/sgf2007-report.pdf)
 - [PROC REPORT STYLE IN HEADER](https://communities.sas.com/t5/ODS-and-Base-Reporting/PROC-REPORT-STYLE-IN-HEADER/td-p/91381)
+
+**Extra:**  
+
+- [TABULATE Procedure](https://documentation.sas.com/?docsetId=proc&docsetTarget=n00yutbvvckjwrn1ldg5xkvjy1pu.htm&docsetVersion=9.4&locale=en)
+- [Introduction to PROC TABULATE](https://www.lexjansen.com/nesug/nesug06/dm/da05.pdf)
