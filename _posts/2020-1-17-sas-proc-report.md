@@ -161,9 +161,12 @@ run;
 - [ODS TAGSETS.EXCELXP and ODS EXCEL SHOWDOWN](https://support.sas.com/resources/papers/proceedings17/0973-2017.pdf)
 - [Using the New ODS EXCEL Destination in SAS® 9.4](https://support.sas.com/resources/papers/proceedings17/0169-2017.pdf)
 - [Unleash the Power of PROC REPORT
-with the ODS EXCEL Destination](https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2479-2018.pdf)
+with the ODS EXCEL](https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2479-2018.pdf)
 - [Beyond the Basics: Advanced PROC REPORT Tips and Tricks](https://support.sas.com/rnd/papers/sgf07/sgf2007-report.pdf)
 - [PROC REPORT STYLE IN HEADER](https://communities.sas.com/t5/ODS-and-Base-Reporting/PROC-REPORT-STYLE-IN-HEADER/td-p/91381)
+- [A Deep Dive into the SAS® ODS Excel Destination (TAGATTR)](https://www.lexjansen.com/sesug/2018/SESUG2018_Paper-295_Final_PDF.pdf)
+- [Exporting formulas to Excel using the ODS ExcelXP tagset](https://support.sas.com/resources/papers/proceedings14/1854-2014.pdf)
+- [How to Use Microsoft Formats with ODS](https://support.sas.com/resources/papers/proceedings11/266-2011.pdf)
 
 **Extra:**  
 
