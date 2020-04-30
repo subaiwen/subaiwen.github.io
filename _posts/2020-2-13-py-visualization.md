@@ -52,6 +52,6 @@ description: My notes of using Python
 - [10 Useful Python Data Visualization Libraries for Any Discipline](https://mode.com/blog/python-data-visualization-libraries/)
 - [Intro to Matplotlib, Pandas Visualization, Seaborn, ggplot, Plotly](https://towardsdatascience.com/introduction-to-data-visualization-in-python-89a54c97fbed)
 
-**Before plotting: **
-[Tidy data](https://tomaugspurger.github.io/modern-5-tidy.html)
-[dplyr and pandas](https://tomaugspurger.github.io/dplry-pandas.html)
+#### Before plotting:
+- [Tidy data](https://tomaugspurger.github.io/modern-5-tidy.html)  
+- [dplyr and pandas](https://tomaugspurger.github.io/dplry-pandas.html)
