@@ -1,5 +1,5 @@
 ---
-title: "实验设计: 0. 概述"
+title: "实验设计: 0. 大纲"
 layout: post
 date: 2020-06-04 15:43
 image: /assets/images/favicon/GitHub-Mark.png
@@ -11,12 +11,10 @@ category: blog
 author: subaiwen
 description: An intro to Experimental Design
 ---
-
-> "Block what you can, and randomize what you cannot"
-
----
 # 介绍
 本教程主要面向对统计学有初浅了解的人群。通过此教程，你将了解：实验设计的概念、框架，实验设计在市场业务的实际运用，实验设计相关的统计检验方法。
+
+---
 
 # 大纲
 ### 1. 实验设计介绍
@@ -30,7 +28,6 @@ description: An intro to Experimental Design
 
 ### 4. 数据分析
 实验执行后，如何进行相关的数据分析和统计检验；
-
 
 ---
 ## Reference
