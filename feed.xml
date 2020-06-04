@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://subaiwen.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://subaiwen.github.io/" rel="alternate" type="text/html" /><updated>2020-06-04T08:29:02+00:00</updated><id>https://subaiwen.github.io/feed.xml</id><title type="html">Zhijian Liu</title><subtitle>Blog</subtitle><entry><title type="html">实验设计: 0. 大纲</title><link href="https://subaiwen.github.io/experiment-design-0/" rel="alternate" type="text/html" title="实验设计: 0. 大纲" /><published>2020-06-04T15:43:00+00:00</published><updated>2020-06-04T15:43:00+00:00</updated><id>https://subaiwen.github.io/experiment-design-0</id><content type="html" xml:base="https://subaiwen.github.io/experiment-design-0/">&lt;h1 id=&quot;介绍&quot;&gt;介绍&lt;/h1&gt;
+&lt;p&gt;本教程主要面向对统计学有初浅了解的人群。通过此教程，你将了解：实验设计的概念、框架，实验设计在市场业务的实际运用，实验设计相关的统计检验方法。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;大纲&quot;&gt;大纲&lt;/h1&gt;
+&lt;h3 id=&quot;1-实验设计介绍&quot;&gt;1. 实验设计介绍&lt;/h3&gt;
+&lt;p&gt;实验是什么，用于解决什么问题；实验包括什么元素，为什么要考虑这些元素；有什么经常用到的术语；一个完整的实验设计方案是什么样的；&lt;/p&gt;
+
+&lt;h3 id=&quot;2-实验设计框架&quot;&gt;2. 实验设计框架&lt;/h3&gt;
+&lt;p&gt;有什么常用的实验设计框架；如何计算你的最少所需样本量；&lt;/p&gt;
+
+&lt;h3 id=&quot;3-实验设计方案实例&quot;&gt;3. 实验设计方案实例&lt;/h3&gt;
+&lt;p&gt;本文以实际案例展示一个完整的实验设计方案；&lt;/p&gt;
+
+&lt;h3 id=&quot;4-数据分析&quot;&gt;4. 数据分析&lt;/h3&gt;
+&lt;p&gt;实验执行后，如何进行相关的数据分析和统计检验；&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;Roger E. Kirk(2012).&lt;em&gt;Experimental Design-Procedures for the Behavioral Sciences&lt;/em&gt;.Sage Publication, Inc.&lt;/p&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="Note" /><category term="中文" /><summary type="html">介绍 本教程主要面向对统计学有初浅了解的人群。通过此教程，你将了解：实验设计的概念、框架，实验设计在市场业务的实际运用，实验设计相关的统计检验方法。</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Python: Connect to Oracle</title><link href="https://subaiwen.github.io/py-oracle/" rel="alternate" type="text/html" title="Python: Connect to Oracle" /><published>2020-03-14T19:27:00+00:00</published><updated>2020-03-14T19:27:00+00:00</updated><id>https://subaiwen.github.io/py-oracle</id><content type="html" xml:base="https://subaiwen.github.io/py-oracle/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Installing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cx_Oracle&lt;/code&gt; module using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Creating DSN for Oracle&lt;/li&gt;
+  &lt;li&gt;Creating a module &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.py&lt;/code&gt; to store the Oracle database’s configuration&lt;/li&gt;
+  &lt;li&gt;Creating standalone connections&lt;/li&gt;
+  &lt;li&gt;SQL queries execution&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+&lt;h3 id=&quot;1-installing-the-cx_oracle-module-using-pip&quot;&gt;1. Installing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cx_Oracle&lt;/code&gt; module using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;.&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;python3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upgrade&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-creating-dsn-for-oracle&quot;&gt;2. Creating DSN for Oracle&lt;/h3&gt;
+&lt;p&gt;An ODBC Data Source Name (DSN) stores information for establishing a connection to a database on a remote database server. A system DSN provides access to multiple users, rather than only the user who created it. You can use &lt;em&gt;ODBC Administrator&lt;/em&gt; to create DSN for Oracle.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cx_Oracle.makedsn()&lt;/code&gt; function can be used to construct a connect descriptor string for the data source name parameter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsn&lt;/code&gt;. For example, to connect to the Oracle Database service &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;orclpdb&lt;/code&gt; that is running on the host &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dbhost.example.com&lt;/code&gt; with the default Oracle Database port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1521&lt;/code&gt;, use:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;makedsn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dbhost.example.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1521&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orclpdb&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userpwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-creating-a-module-configpy-to-store-the-oracle-databases-configuration&quot;&gt;3. Creating a module &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.py&lt;/code&gt; to store the Oracle database’s configuration.&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;usrname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&amp;lt;username&amp;gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&amp;lt;password&amp;gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dbhost.example.com/orclpdb'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1512&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'UTF-8'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this module, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsn&lt;/code&gt; has two parts the server (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dbhost.example.com&lt;/code&gt;) and the pluggable database (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;orclpdb&lt;/code&gt;). The dsn string can be one of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An Oracle Easy Connect string&lt;/li&gt;
+  &lt;li&gt;An Oracle Net Connect Descriptor string&lt;/li&gt;
+  &lt;li&gt;A Net Service Name mapping to a connect descriptor&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For more information about naming methods, see &lt;a href=&quot;https://docs.oracle.com/en/database/oracle/oracle-database/19/netag/configuring-naming-methods.html#GUID-E5358DEA-D619-4B7B-A799-3D2F802500F1&quot;&gt;Oracle Net Service Reference&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If the Oracle Database runs on a local server, you use the following &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsn&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'localhost/orclpdb'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-creating-standalone-connections&quot;&gt;4. Creating standalone connections.&lt;/h3&gt;
+&lt;p&gt;You can create a connection by using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cx_Oracle.connect()&lt;/code&gt; method, and close the connection by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.close()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;cx_Oracle&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;config&lt;/span&gt;
+ 
+&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usrname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+    &lt;span class=&quot;c1&quot;&gt;# show the version of the Oracle Database
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# release the connection
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Alternatively, you can let Python automatically closes the connection when the reference to the connection goes out of scope by using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt; block:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# show the version of the Oracle Database
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;5-sql-queries-execution&quot;&gt;5. SQL queries execution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Open cursor: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor = connection.cursor()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Parse query(optional): &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor.parse(&amp;lt;sql&amp;gt;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It can be used to validate sql statements before executing them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bind variable: placeholders, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:&amp;lt;var&amp;gt;&lt;/code&gt; in the SQL statement that can be used to pass value&lt;/li&gt;
+  &lt;li&gt;Execute query: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor.execute(&amp;lt;sql&amp;gt;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Fetch content: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor.fetchone()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor.fetchmany()&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor.fetchall()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fetchmany&lt;/code&gt; actions can be fine-tuned by setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arraysize&lt;/code&gt; attribute of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor&lt;/code&gt; which sets the number of rows to return from the database in each underlying request. The higher setting of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arraysize&lt;/code&gt;, the fewer number of network round trips but the more memory required. The default value for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arraysize&lt;/code&gt; is 100.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Close cursor: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cursor.close()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It will be closed automatically using a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;with&lt;/code&gt; block, like connection.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;cx_Oracle&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;config&lt;/span&gt;
+ 
+ 
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find_product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+    Find product name by price and cost
+    :param price: price of the product
+    :param cost: standard cost of the product
+    :return: product name
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;select product_name 
+    			 from products
+	    		 where list_price &amp;gt; :price and
+    		 	 standard_cost &amp;lt;= :cost&quot;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# establish a new connection
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dsn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;# create a cursor
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            	       &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetchone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[:]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cx_Oracle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cost&lt;/span&gt; 
+  
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_product&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You can pass value to the bind variables:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;by names: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;price=600, cost=500&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;by dictionary: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{price:600, cost:500}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;by pisitions: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[600, 500]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cx-oracle.readthedocs.io/en/latest/&quot;&gt;cx_Oracle’s documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oracletutorial.com/python-oracle/&quot;&gt;Python Oracle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="Python" /><category term="Oracle" /><summary type="html">Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Python: Visualization</title><link href="https://subaiwen.github.io/py-visualization/" rel="alternate" type="text/html" title="Python: Visualization" /><published>2020-02-13T16:14:00+00:00</published><updated>2020-02-13T16:14:00+00:00</updated><id>https://subaiwen.github.io/py-visualization</id><content type="html" xml:base="https://subaiwen.github.io/py-visualization/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#matplotlib&quot;&gt;Matplotlib&lt;/a&gt;: low level, provides lots of freedom&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#seaborn&quot;&gt;Seaborn&lt;/a&gt;: high-level interface, great default styles&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ggplot&quot;&gt;ggplot&lt;/a&gt;: based on R’s ggplot2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#plotly&quot;&gt;Plotly&lt;/a&gt;: can create interactive plots&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dash&quot;&gt;Dash&lt;/a&gt;: building analytical web applications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;matplotlib&quot;&gt;matplotlib&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://matplotlib.org&quot;&gt;&lt;strong&gt;matplotlib&lt;/strong&gt;&lt;/a&gt; is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. Despite being over a decade old, it’s still the most widely used library for plotting in the Python community. It was designed to closely resemble MATLAB, a proprietary programming language developed in the 1980s.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://matplotlib.org/tutorials/introductory/sample_plots.html#sphx-glr-tutorials-introductory-sample-plots-py&quot;&gt;Sample plots in matplotlib&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://matplotlib.org/tutorials/introductory/lifecycle.html#sphx-glr-tutorials-introductory-lifecycle-py&quot;&gt;The Lifecycle of a Plot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rougier/matplotlib-tutorial&quot;&gt;Github::matplotlib-tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;seaborn&quot;&gt;seaborn&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://seaborn.pydata.org&quot;&gt;Seaborn&lt;/a&gt; is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://seaborn.pydata.org/examples/index.html#example-gallery&quot;&gt;Example gallery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://seaborn.pydata.org/tutorial.html&quot;&gt;Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ggplot&quot;&gt;ggplot&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;http://ggplot.yhathq.com&quot;&gt;ggplot&lt;/a&gt; is a plotting system for Python based on R’s ggplot2 and the Grammar of Graphics.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;dash--plotly&quot;&gt;dash &amp;amp; plotly&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://plot.ly/python/&quot;&gt;plotly&lt;/a&gt;’s Python graphing library makes interactive, publication-quality graphs.&lt;br /&gt;
+&lt;a href=&quot;https://dash.plot.ly&quot;&gt;dash&lt;/a&gt; is a Python framework for building analytical web applications. No JavaScript required.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dash.plot.ly/getting-started&quot;&gt;Dash User Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://plot.ly/python/creating-and-updating-figures/&quot;&gt;Plotly User Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/how-to-build-a-complex-reporting-dashboard-using-dash-and-plotl-4f4257c18a7f&quot;&gt;How to Build a Reporting Dashboard using Dash and Plotly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://python-graph-gallery.com&quot;&gt;Python Graph Gallery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mode.com/blog/python-data-visualization-libraries/&quot;&gt;10 Useful Python Data Visualization Libraries for Any Discipline&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/introduction-to-data-visualization-in-python-89a54c97fbed&quot;&gt;Intro to Matplotlib, Pandas Visualization, Seaborn, ggplot, Plotly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;before-plotting&quot;&gt;Before plotting:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tomaugspurger.github.io/modern-5-tidy.html&quot;&gt;Tidy data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tomaugspurger.github.io/dplry-pandas.html&quot;&gt;dplyr and pandas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="SAS" /><summary type="html">Overview Matplotlib: low level, provides lots of freedom Seaborn: high-level interface, great default styles ggplot: based on R’s ggplot2 Plotly: can create interactive plots Dash: building analytical web applications</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Python: Connect to MySQL</title><link href="https://subaiwen.github.io/py-mysql/" rel="alternate" type="text/html" title="Python: Connect to MySQL" /><published>2020-02-12T19:15:00+00:00</published><updated>2020-02-12T19:15:00+00:00</updated><id>https://subaiwen.github.io/py-mysql</id><content type="html" xml:base="https://subaiwen.github.io/py-mysql/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install &lt;strong&gt;MySQL Connector/Python&lt;/strong&gt; using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Establish MySQL database Connection from Python.&lt;/li&gt;
+  &lt;li&gt;Define the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SELECT&lt;/code&gt; statement query. Here you need to know the table, and it’s column details.&lt;/li&gt;
+  &lt;li&gt;Execute the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SELECT&lt;/code&gt; query using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cursor.execute()&lt;/code&gt; method.&lt;/li&gt;
+  &lt;li&gt;Get resultSet from the cursor object using a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cursor.fetchall()&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cursor.fetchmany()&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cursor.fetchone()&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Ierate over the ResultSet and get each row and its column value.&lt;/li&gt;
+  &lt;li&gt;Catch any SQL exceptions that may come up during the process.&lt;/li&gt;
+  &lt;li&gt;Close the Python database connection.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 1. Install MySQL Connector/Python using pip.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;external&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mysql.connector&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mysql.connector&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 2. Establish MySQL database Connection from Python.
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'localhost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                         &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'employees'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                         &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'user'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                         &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 3. Define the SELECT statement query.
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SELECT first_name, last_name, hire_date FROM employees &quot;&lt;/span&gt;
+             &lt;span class=&quot;s&quot;&gt;&quot;WHERE hire_date BETWEEN %s AND %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 4. Execute the SELECT query using the cursor.execute() method.
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;hire_start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;hire_end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hire_start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hire_end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 5. Get resultSet from the cursor object.
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;records&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetchall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 6. Ierate over the ResultSet and get each row and its column value.
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Total number of rows in employees is: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rowcount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1. Printing each employee record:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hire_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;records&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{}, {} was hired on {:%d-%b-%Y}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;last_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hire_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2. Printing each employee card:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;records&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;first name = &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;last name = &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hire date  = &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 7. Catch any SQL exceptions that may come up during the process.
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Error reading data from MySQL table:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_connected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# 8. Close the Python database connection.
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MySQL connection is closed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p align=&quot;left&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbu7f9i4syj30ho0g0myr.jpg&quot; width=&quot;350&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;install-employees-database&quot;&gt;Install Employees database&lt;/h2&gt;
+
+&lt;h5 id=&quot;1-install-the-data-folder-from-github-repo-and-follow-the-tutorial&quot;&gt;1. Install the data folder from &lt;a href=&quot;https://github.com/datacharmer/test_db&quot;&gt;Github repo&lt;/a&gt; and follow the tutorial.&lt;/h5&gt;
+
+&lt;h5 id=&quot;2-change-directory-to-the-repository-then-run-mysql--employeessql&quot;&gt;2. Change directory to the repository, then run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql &amp;lt; employees.sql&lt;/code&gt;.&lt;/h5&gt;
+&lt;p&gt;If you want to install with two large partitioned tables, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql &amp;lt; employees_partitioned.sql&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In bash, you execute a .sql script using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql -u user -p &amp;lt; db.sql&lt;/code&gt;.&lt;br /&gt;
+So here you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql -u user -p &amp;lt; employees.sql&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;3-after-installing-you-can-run-one-of-the-following&quot;&gt;3. After installing, you can run one of the following&lt;/h5&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &amp;lt; test_employees_md5.sql
+&lt;span class=&quot;c&quot;&gt;#or&lt;/span&gt;
+mysql &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &amp;lt; test_employees_sha.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pynative.com/python-mysql-select-query-to-fetch-data/&quot;&gt;Python Select from MySQL Table&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dev.mysql.com/doc/connector-python/en/&quot;&gt;MySQL Connector/Pythonx&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/python/python_try_except.asp&quot;&gt;Python Try Except&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/create-user.html&quot;&gt;MySQL::CREATE USER Statement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/grant.html&quot;&gt;MySQL::GRANT Statement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/anzhen0429/article/details/78296814&quot;&gt;MySQL授予权限（Grant语句）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line&quot;&gt;Create &amp;amp; Manage MySQL Databases, Tables &amp;amp; Users&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="Python" /><category term="MySQL" /><summary type="html">Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SAS: Visualization</title><link href="https://subaiwen.github.io/sas-visualization/" rel="alternate" type="text/html" title="SAS: Visualization" /><published>2020-02-11T22:18:00+00:00</published><updated>2020-02-11T22:18:00+00:00</updated><id>https://subaiwen.github.io/sas-visualization</id><content type="html" xml:base="https://subaiwen.github.io/sas-visualization/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;#single-cell-plotting&quot;&gt;&lt;strong&gt;Single-Cell Plotting&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-one-variable&quot;&gt;One-Variable&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-two-variables&quot;&gt;Two-Variables&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#examples-single-cell-plotting&quot;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;#multiple-cell-plotting&quot;&gt;&lt;strong&gt;Multiple-Cell Plotting&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#sgpanel&quot;&gt;SGPanel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sgscatter&quot;&gt;SGScatter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#examples-multiple-cell-plotting&quot;&gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;#reporting&quot;&gt;&lt;strong&gt;Reporting&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#ods-layout&quot;&gt;ODS LAYOUT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;single-cell-plotting&quot;&gt;Single-Cell Plotting&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA = data-set &amp;lt;options&amp;gt;; 
+	PLOTNAME-1 &amp;lt;plot statements&amp;gt; &amp;lt; / OPTIONS&amp;gt;;
+	PLOTNAME-2 &amp;lt;plot statements&amp;gt; &amp;lt; / OPTIONS&amp;gt;;
+	...
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;1-one-variable&quot;&gt;1. One Variable&lt;/h3&gt;
+&lt;h4 id=&quot;continuous&quot;&gt;Continuous&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Plot&lt;/th&gt;
+      &lt;th&gt;Syntax&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Histogram&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HISTOGRAM var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Density&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Density var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Box Plot&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HBOX var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VBOX var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;discrete&quot;&gt;Discrete&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Plot&lt;/th&gt;
+      &lt;th&gt;Syntax&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bar Chart&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HBAR var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VBAR var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;2-two-variables&quot;&gt;2. Two Variables&lt;/h3&gt;
+&lt;h4 id=&quot;continuous-x-continuous-y&quot;&gt;Continuous x, Continuous y&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Plot&lt;/th&gt;
+      &lt;th&gt;Syntax&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Scatter Plot&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SCATTER X=x-var Y=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;High-Low&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HIGHLOW &amp;lt;X=x-var|Y=y-var&amp;gt; HIGH=numeric-var LOW=numeric-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Series&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SERIES X=x-var Y=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Line Chart&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VLINE x-var /RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HLINE x-var /RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HEATMAP&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEATMAP X=x-var Y=y-var &amp;lt;/ options&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HEATMAPPARM&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEATMAPPARM X=x-var Y=y-var &amp;lt;/ options&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bubble&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BUBBLE X=x-var Y=y-var &amp;lt;/ options&amp;gt;; &lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Box Plot&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HBOX var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VBOX var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Needle&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NEEDLE X=x-var Y=y-var &amp;lt;/ options&amp;gt;; &lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;discrete-x-continuous-y&quot;&gt;Discrete x, Continuous y&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Plot&lt;/th&gt;
+      &lt;th&gt;Syntax&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bar Chart&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HBAR x-var / RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VBAR x-var / RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dot Plot&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dot x-var / RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Waterfall&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WATERFALL x-var / RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pie Chart&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROC SGPIE&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PIE x-var / RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Donut&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROC SGPIE&lt;/code&gt;&lt;br /&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DONUT x-var / RESPONSE=y-var &amp;lt;/ OPTIONS&amp;gt;;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;discrete-x--discrete-y&quot;&gt;Discrete x , Discrete y&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Plot&lt;/th&gt;
+      &lt;th&gt;Syntax&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bubble&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BUBBLE X=x-var Y=y-var &amp;lt;/ options&amp;gt;; &lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Text&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TEXT X=x-var Y=y-var TEXT=y-var &amp;lt;/ options&amp;gt;; &lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;3-axis-table&quot;&gt;3. Axis table&lt;/h3&gt;
+&lt;p&gt;From SAS 9.4, you can start using &lt;a href=&quot;https://documentation.sas.com/?docsetId=grstatgraph&amp;amp;docsetTarget=p0v5nj3waz75w4n1s2y70echq6im.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;Axistable statement&lt;/a&gt; which can generate an annotation table alongside the axis. For example, &lt;a href=&quot;https://blogs.sas.com/content/graphicallyspeaking/2015/12/23/box-plot-with-stat-table-and-markers/&quot;&gt;Box plot with axistable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are using SAS 9.3, the trick would be &lt;a href=&quot;https://blogs.sas.com/content/graphicallyspeaking/2012/06/25/graphical-swiss-army-knife/&quot;&gt;creating an annotation table&lt;/a&gt; before plotting. For example, &lt;a href=&quot;https://blogs.sas.com/content/graphicallyspeaking/2012/07/15/risk-tables-annotated-or-not/&quot;&gt;Risk tables, annotated or not&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-maps&quot;&gt;4. Maps&lt;/h3&gt;
+&lt;p&gt;To be continued …&lt;/p&gt;
+
+&lt;h3 id=&quot;examples-single-cell-plotting&quot;&gt;Examples (Single-Cell Plotting)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Histogram:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.pricedata;
+	TITLE &quot;This is the tile&quot;;
+	WHERE REGIONNAME = 'Region1';
+	HISTOGRAM PRICE /BINWIDTH=10 DATALABEL=count FILLATTRS=(COLOR='#CDCDCD');
+	DENSITY price/ TRANSPARENCY=0.7 LINEATTRS=(COLOR='#3F3059'); /* type = kernel */
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbst4kgnpvj30zc0qeacl.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bar Chart:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;data test;
+	set sashelp.burrows;
+	if status = -1 or missing(status) then status = 1;
+	if z &amp;lt; 531 or missing(z) then a = 'A';
+	if z &amp;gt;= 531 then a = 'B';
+run;
+* frequency table;
+proc freq data=test;
+	tables a*status/ out=test1 outpct;
+run;
+proc sgplot data=test1;
+	vbar status / response=pct_col group=a barwidth=0.4;
+	xaxistable pct_col/ x = status ;
+	keylegend/ location=outside position=topright;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/00831rSTgy1gclrxbs86yj30ze0qetay.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;High-Low:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.stocks;
+	WHERE stock='IBM' AND YEAR(date)=2005;
+	HIGHLOW X=date HIGH=high LOW=low / CLOSE=close LINEATTRS=(color='maroon');
+run;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsqa32rsfj30z80q8dhy.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bubble:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA = sashelp.class;
+	BUBBLE X = height Y = weight SIZE =age / GROUP = sex;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbst6fsmt7j30zc0qggox.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scatter:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;%LET color1 = '#3F3059';        
+%LET color2 = cxA23A2E;
+TITLE &quot;Origin in {Europe, USA}&quot;;
+PROC SGPLOT DATA=sashelp.cars;
+WHERE origin^='Asia' &amp;amp;&amp;amp; type^=&quot;Hybrid&quot;;                 
+   STYLEATTRS DATACONTRASTCOLORS = (&amp;amp;color1 &amp;amp;color2);
+   SCATTER X=weight Y=mpg_city / GROUP=Origin MARKERATTRS=(SYMBOL=CircleFilled);
+   KEYLEGEND / LOCATION=inside POSITION=TopRight ACROSS=1;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsswdmij2j30zc0qcn0i.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dot Plot:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.cars; 
+  DOT TYPE / RESPONSE=horsepower LIMITS=both STAT=mean 
+    MARKERATTRS=(SYMBOL=circlefilled SIZE=9); 
+    XAXIS grid;
+    YAXIS DISPLAY=(nolabel) OFFSETMIN=0.1;
+    KEYLEGEND / LOCATION=inside POSITION=topright ACROSS=1;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsxlgmt1dj30ze0qggnz.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Series:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.stocks;
+	TITLE &quot;Stock Prices 1986-2005&quot;; 
+	SERIES X=date Y=close / GROUP=stock GROUPLP=stock;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbstuogi7ej30ze0qg11r.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Line Chart:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.class;
+	TITLE &quot;Height by Age and Sex&quot;;
+	VLINE AGE / RESPONSE=height STAT=mean MARKERS GROUP=sex;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsvgd0yjwj30zg0qijuh.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Regression:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;TITLE &quot;Regression plot&quot;;
+PROC SGPLOT DATA=sashelp.cars;
+	REG X=horsepower Y=enginesize / GROUP=cylinders;
+	WHERE cylinders IN (4 6 8);
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsu65fecoj30zc0qin2z.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Box Plot:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.cars; 
+	TITLE &quot;Price by Car Type&quot;; 
+	HBOX msrp / GROUP=type MEANATTRS=(SYMBOL=star) CATEGORY=type;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsulnp8e1j30zg0qi778.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Heat Map:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPLOT DATA=sashelp.heart; 
+	HEATMAP X=weight Y=cholesterol / NXBINS=80 NYBINS=80;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbsv9lqqa1j30ze0qeag4.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;multiple-cell-plotting&quot;&gt;Multiple-Cell Plotting&lt;/h2&gt;
+&lt;h3 id=&quot;sgpanel&quot;&gt;SGPANEL&lt;/h3&gt;
+&lt;p&gt;The SGPANEL procedure creates a panel of graph cells for the values of one or more classification variables. For example, if a data set contains three variables (A, B and C) and you want to compare the scatter plots of B*C for each value of A, then you can use the SGPANEL procedure to create this panel. The SGPANEL procedure creates a layout for you automatically and splits the panel into multiple graphs if necessary.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGPANEL DATA=data &amp;lt;options&amp;gt;;
+	PANELBY var;
+	&amp;lt;options&amp;gt;;
+	&amp;lt;graph&amp;gt; ...;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;sgscatter&quot;&gt;SGSCATTER&lt;/h3&gt;
+&lt;p&gt;The SGSCATTER procedure creates a paneled graph of scatter plots for multiple combinations of variables, depending on the plot statement that you use.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGSCATTER DATA=data &amp;lt;options&amp;gt;;
+	&amp;lt;statement&amp;gt;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;examples-multiple-cell-plotting&quot;&gt;Examples (Multiple-Cell Plotting)&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;SGPanel:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;TITLE1 &quot;PRODUCT SALES&quot;;
+PROC SGPANEL DATA=SASHELP.PRDSALE;
+  PANELBY quarter;
+  ROWAXIS LABEL=&quot;sales&quot;;
+  VBAR product / RESPONSE=predict STAT=mean
+                 TRANSPARENCY=0.3;
+  VBAR product / RESPONSE=actual STAT=mean
+                 BARWIDTH=0.5 TRANSPARENCY=0.3;
+RUN; 
+TITLE1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbtpq9wh7fj30u00u0n1o.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;title1 &quot;Distribution of Cholesterol Levels&quot;;
+PROC SGPANEL DATA=sashelp.heart;
+  PANELBY weight_status sex / LAYOUT=lattice
+                              NOVARNAME;
+  HBOX cholesterol;
+RUN; 
+title1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbtqi9eydwj30z80qggoc.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SGScatter:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGSCATTER DATA=sashelp.cars;
+  COMPARE Y=mpg_highway
+          X=(weight enginesize horsepower)
+          / GROUP=type;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbtr35a4ytj30ze0qin2n.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SGSCATTER DATA=sashelp.iris
+               (WHERE=(species EQ &quot;Virginica&quot;));
+MATRIX PETALLENGTH PETALWIDTH SEPALLENGTH
+       / ELLIPSE=(TYPE=mean)
+         DIAGONAL=(HISTOGRAM KERNEL);
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbtr6dxs82j30u20u0jxe.jpg&quot; width=&quot;530&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;reporting&quot;&gt;Reporting&lt;/h2&gt;
+&lt;h3 id=&quot;ods-layout&quot;&gt;ODS LAYOUT&lt;/h3&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbtovkble9j30ey0h2gmr.jpg&quot; width=&quot;280&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ODS LAYOUT ABSOLUTE:&lt;/strong&gt;&lt;br /&gt;
+Absolute layout is perfectly suited for static types of output that can be printed on a single page where you want output placed in a specific location.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ODS LAYOUT ABSOLUTE &amp;lt;options&amp;gt;;
+   ODS REGION;
+      ...;
+      
+   ODS REGION;
+      ...;
+ODS LAYOUT END;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;ODS LAYOUT GRIDDED:&lt;/strong&gt;&lt;br /&gt;
+Gridded layout for dynamically sized regions can accommodate dynamic data, can span more than one page, and allows for easier alignment. Programs created using gridded layout are easier to maintain than those created using absolute layout.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ODS LAYOUT GRIDDED ROWS=n-row COLUMNS=n-col &amp;lt;options&amp;gt;;
+   ODS REGION ROW=row-index COLUMN=col-index;
+      ...;
+      
+   ODS REGION ROW=row-index COLUMN=col-index;
+      ...;
+ODS LAYOUT END;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;ODS LAYOUT GRIDDED:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;OPTIONS NONUMBER NODATE;
+ODS PDF FILE='test.pdf';
+TITLE 'THIS IS TITLE1';
+FOOTNOTE 'THIS IS FOOTNOTE1';
+/* Page 1 in the PDF*/
+ODS LAYOUT GRIDDED;
+
+ODS REGION ROW=1 COLUMN=1;
+TITLE 'THIS IS THE REGION TITLE';
+FOOTNOTE 'THIS IS THE REGION FOOTNOTE';
+PROC PRINT DATA=sashelp.class(OBS=10);
+RUN;
+
+ODS REGION ROW=2 COLUMN=1 WIDTH=3in;
+PROC SGPLOT DATA=sashelp.stocks;
+    TITLE &quot;Stock Prices 1986-2005&quot;; 
+    SERIES X=date Y=close / GROUP=stock GROUPLP=stock;
+RUN; 
+
+ODS LAYOUT END;
+/* End of Page 1 */
+ODS PDF CLOSE; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbtokgsyfxj30u010e0y7.jpg&quot; width=&quot;580&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;appendix&quot;&gt;Appendix&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/content/dam/SAS/support/en/books/pro-template-made-easy-a-guide-for-sas-users/62007_Appendix.pdf&quot;&gt;Color Names Defined by SAS/GRAPH&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=grstatproc&amp;amp;docsetTarget=p0i3rles1y5mvsn1hrq3i2271rmi.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;Marker Attributes and Symbols&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/rnd/app/ODSGraphics/TipSheet_SGPLOT.pdf&quot;&gt;SGPLOT Procedures Tip Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;h3 id=&quot;single-cell&quot;&gt;Single-Cell&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/edu/schedules.html?id=3033&quot;&gt;SAS Programming for R Users&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sassoftware/sas-prog-for-r-users&quot;&gt;Github::SAS Programming for R Users (Course Materials)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=grstatproc&amp;amp;docsetTarget=p073bl97jzadkmn15lhq58yiy2uh.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;SAS-doc::SGPLOT Procedure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=grstatproc&amp;amp;docsetTarget=n19gxtzyuf79t3n16g5v26b73ckv.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en#p0rbhrtx1zharwn1a1l805qx77c7&quot;&gt;Gallery of Plots&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2019/3167-2019.pdf&quot;&gt;Getting Started with the SGPLOT Procedure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lexjansen.com/wuss/2008/how/how05.pdf&quot;&gt;Using PROC SGPLOT for Quick High Quality Graphs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.pharmasug.org/proceedings/2016/DG/PharmaSUG-2016-DG04.pdf&quot;&gt;Fifty Ways to Change your Colors (in ODS Graphics)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/iml/2017/02/06/group-colors-sgplot.html&quot;&gt;What colors does PROC SGPLOT use for markers?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://people.uncw.edu/blumj/stt592/ppt/Bar%20Charts%20with%20SGPLOT.pdf&quot;&gt;Bar Charts with SGPLOT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/?s=sgplot&quot;&gt;SAS-blogs::SGPLOT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;multiple-cell&quot;&gt;Multiple-Cell&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://support.sas.com/rnd/base/ods/Tipsheet_ods_layout.pdf&quot;&gt;ODS Layout Tip Sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=odsug&amp;amp;docsetTarget=p0z7mlae4n6vf7n1ldq07tigzuqh.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;ODS LAYOUT Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=grstatproc&amp;amp;docsetVersion=9.4&amp;amp;docsetTarget=p17wwoehcyc6mxn1hpcgxy8ixw6w.htm&amp;amp;locale=en&quot;&gt;SGPANEL Procedure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=grstatproc&amp;amp;docsetVersion=9.4&amp;amp;docsetTarget=p0lfzklhx36ylln1t9sssgzuf64m.htm&amp;amp;locale=en&quot;&gt;SGSCATTER Procedure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;interactive-dashboard&quot;&gt;Interactive Dashboard&lt;/h3&gt;
+&lt;p&gt;JMP&lt;br /&gt;
+SAS®Visual Analytics&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=K74_FNnlIF8&quot;&gt;Excel&lt;/a&gt;&lt;/p&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="SAS" /><summary type="html">Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SAS: Macro Variable</title><link href="https://subaiwen.github.io/sas-macro-var/" rel="alternate" type="text/html" title="SAS: Macro Variable" /><published>2020-02-07T01:22:00+00:00</published><updated>2020-02-07T01:22:00+00:00</updated><id>https://subaiwen.github.io/sas-macro-var</id><content type="html" xml:base="https://subaiwen.github.io/sas-macro-var/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#LET-statement&quot;&gt;%LET statement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Using-the-INTO-in-PROC-SQL&quot;&gt;Using the INTO in PROC SQL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Using-the-CALL-SYMPUTX-routine&quot;&gt;Using the CALL SYMPUTX routine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-let-statement&quot;&gt;1. %LET statement&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;%LET macro-variable-name = text-or-text-value;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;2-using-the-into-in-proc-sql&quot;&gt;2. Using the INTO in PROC SQL&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Creating a single value:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SQL;
+	SELECT var-1, var-2
+	INTO :macro-var-1, :macro-var-2
+	FROM table;
+QUIT;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: only the first record is assigned to the macro variable, when there are multiple records.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating lists of values:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SEPERATED BY&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SQL;
+	SELECT var-1, var-2
+	INTO :macro-var-1 SEPERATED BY ',', 
+		 :macro-var-2 SEPERATED BY ' '
+	FROM table;
+QUIT;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;THROUGH&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SQL;
+	SELECT var-1, var-2
+	INTO :macro-var-1-x THROUGH :macro-var-1-y, 
+		 :macro-var-2-x THROUGH :macro-var-2-y
+	FROM table;
+QUIT;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;macro-var-1-x&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macro-var-1-y&lt;/code&gt; variables, each of them stores each record of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var-1&lt;/code&gt; from the $x^{th}$ row to the $y^{th}$ row. And the same for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;macro-var-2-x&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macro-var-2-y&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;No upper bound:&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SQL;
+	SELECT var-1, var-2
+	INTO :macro-var-1-, 
+		 :macro-var-2-
+	FROM table;
+QUIT;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;3-using-the-call-symputx-routine&quot;&gt;3. Using the CALL SYMPUTX routine&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;DATA _NULL_;
+	CALL SYMPUT('macro_var', value);
+RUN;
+%PUT &amp;amp;macro_var;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/resources/papers/proceedings17/1516-2017.pdf&quot;&gt;Five Ways to Create Macro Variables:
+A Short Introduction to the Macro Language&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://renenyffenegger.ch/notes/Companies-Products/SAS/programming/proc/sql/select/into/index&quot;&gt;proc sql - select into&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lexjansen.com/nesug/nesug04/pm/pm13.pdf&quot;&gt;SYMPUT and SYMGET: Getting DATA Step Variables and Macro Variables to Share&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="SAS" /><summary type="html">Overview %LET statement Using the INTO in PROC SQL Using the CALL SYMPUTX routine</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SAS: PUT VS. INPUT</title><link href="https://subaiwen.github.io/sas-put-input/" rel="alternate" type="text/html" title="SAS: PUT VS. INPUT" /><published>2020-02-07T01:22:00+00:00</published><updated>2020-02-07T01:22:00+00:00</updated><id>https://subaiwen.github.io/sas-put-input</id><content type="html" xml:base="https://subaiwen.github.io/sas-put-input/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;When it comes to converting data type or variable type in SAS, it is always challenging to figure out when to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt; and when to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INPUT&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt; function can be applied to a &lt;em&gt;character&lt;/em&gt; or &lt;em&gt;numeric&lt;/em&gt; input, but the output of the Put function is always &lt;em&gt;character&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INPUT&lt;/code&gt; function can only be applied to a &lt;em&gt;character&lt;/em&gt; target, but the output can be &lt;em&gt;character&lt;/em&gt; or &lt;em&gt;numeric&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“In the old, old days” data sources and destinations were usually text.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INPUT&lt;/code&gt; statements, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INFORMAT&lt;/code&gt;s, convert external “text files” into either SAS® character or numeric variables in a SAS data set– converting from “text only” to two types of variables&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt; statements, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FORMAT&lt;/code&gt;s, are used to convert SAS character and numeric variables “into character” – two types into one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;illustration&quot;&gt;Illustration&lt;/h2&gt;
+&lt;p&gt;A. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT()&lt;/code&gt; converts character variable to another character variable.&lt;br /&gt;
+B. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT()&lt;/code&gt; converts numeric variable to a character variable with numeric value.&lt;br /&gt;
+C. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT()&lt;/code&gt; converts character variable with a user defined format to another character variable.&lt;/p&gt;
+
+&lt;p&gt;D. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INPUT()&lt;/code&gt; converts character variable with numeric value and informat to a numeric variable.&lt;br /&gt;
+E. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INPUT()&lt;/code&gt; converts character variable with numeric value and informat to a character variable.&lt;br /&gt;
+F. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INPUT()&lt;/code&gt; converts character variable with numeric value and informat to a numeric variable.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/0082zybpgy1gbnah8zwpzj31280lq42n.jpg&quot; width=&quot;600&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lexjansen.com/nesug/nesug08/ff/ff09.pdf&quot;&gt;An Animated Guide: Using the Put and INput functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/sgf/2015/05/01/converting-variable-types-do-i-use-put-or-input/&quot;&gt;Converting variable types—use PUT() or INPUT()?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="SAS" /><summary type="html">Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SAS: Concatenating Data Sets</title><link href="https://subaiwen.github.io/sas-merge/" rel="alternate" type="text/html" title="SAS: Concatenating Data Sets" /><published>2020-02-06T17:19:00+00:00</published><updated>2020-02-06T17:19:00+00:00</updated><id>https://subaiwen.github.io/sas-merge</id><content type="html" xml:base="https://subaiwen.github.io/sas-merge/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#Combining-SAS-Data-Sets-Vertically&quot;&gt;Combining SAS Data Sets Vertically&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Combining-SAS-Data-Sets-Horizontally&quot;&gt;Combining SAS Data Sets Horizontally&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;combining-sas-data-sets-vertically&quot;&gt;Combining SAS Data Sets Vertically&lt;/h2&gt;
+&lt;h3 id=&quot;1-proc-append&quot;&gt;1. PROC APPEND&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC APPEND BASE=base-data-set DATA=append-data-set &amp;lt;FORCE&amp;gt;;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROC APPEND&lt;/code&gt; step, SAS does not read the observations in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BASE&lt;/code&gt;. Also, SAS cannot change any variable information in the &lt;a href=&quot;https://www.sas.com/content/dam/SAS/en_ca/User%20Group%20Presentations/TASS/Capan-Descriptor.pdf&quot;&gt;descriptor portion&lt;/a&gt; of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BASE&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FORCE&lt;/code&gt; options causes SAS to drop the extra variables in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATA&lt;/code&gt;, and then to issue a warning message to the log.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROC APPEND&lt;/code&gt; does not require the base data set to exist before creation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Try &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROC APPEND BASE=testR12345 DATA=sashelp.class;RUN;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-set&quot;&gt;2. SET&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;DATA data-set;
+	SET 
+	data-set1(rename = (old-name-1 = new-name-1 
+							old-name-2 = new-name-2
+							...
+							old-name-n = new-name-n)) 
+	data-set2 
+	...;
+	&amp;lt;additional SAS statements&amp;gt; 
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Because the DATA step creates a new data set, the input data sets can contain different variables.&lt;/li&gt;
+  &lt;li&gt;If the data sets specified in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SET&lt;/code&gt; statement have a variable with the same name but different types, SAS generates a compile-time error by default.&lt;/li&gt;
+  &lt;li&gt;You can add additional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DATA step statements&lt;/code&gt;, such as an assignment statement to create new variables in the output data set.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;combining-sas-data-sets-horizontally&quot;&gt;Combining SAS Data Sets Horizontally&lt;/h2&gt;
+&lt;h3 id=&quot;1-set&quot;&gt;1. SET&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;DATA data-set;
+	SET data-set1;
+	SET data-set2;
+	... 
+	SET data-setn;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;2-proc-sql&quot;&gt;2. PROC SQL&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SQL;
+  CREATE TABLE table AS
+  SELECT *
+  FROM table-1
+  CROSS JOIN table-2;
+QUIT;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;PROC SQL;
+  CREATE TABLE table AS
+  SELECT *
+  FROM table-1, table-2;
+QUIT;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;3-merge&quot;&gt;3. &lt;a href=&quot;https://documentation.sas.com/?docsetId=lestmtsref&amp;amp;docsetTarget=n1i8w2bwu1fn5kn1gpxj18xttbb0.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;MERGE&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;DATA data-set;
+	MERGE data-set1 data-set2 ... ; 
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MERGE&lt;/code&gt; statement would keep all the observations from the data sets. In other words, the number of obs. of final data set will be equal to the maximum number of obs. of the merging data sets.&lt;br /&gt;
+If you instead use multiple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SET&lt;/code&gt; statements, the final data set will have minimun number of obs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MERGE By:&lt;/strong&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BY&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Merge&lt;/code&gt; statement is similar to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JOIN&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PROC SQL&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;DATA data-set;
+	MERGE data-set1 data-set2 ... ; 
+	BY &amp;lt;DESCENDING&amp;gt; BY-variable(s);
+	&amp;lt;additional SAS statements&amp;gt; 
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BY-variables&lt;/code&gt; will be the bind keys.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IN=:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;DATA data-set;
+	MERGE data-set1(IN=x) data-set2(IN=y) ... ; 
+	BY &amp;lt;DESCENDING&amp;gt; BY-variable(s);
+	&amp;lt;additional SAS statements&amp;gt; 
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Two new column &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; will be generated. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; will have output &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; if the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;By-variable&lt;/code&gt; exists in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data-set1&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; otherwise. And the same for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/resources/papers/proceedings17/1526-2017.pdf&quot;&gt;So You Think You Can Combine Data Sets?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/1746-2018.pdf&quot;&gt;Merge with Caution: How to Avoid Common Problems when Combining SAS Datasets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://communities.sas.com/t5/SAS-Programming/Merging-3-datasets-with-different-data-formats/td-p/451813&quot;&gt;Merging 3 datasets with different data formats&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sas.com/storefront/aux/en/spcombinmodify/60561_excerpt.pdf&quot;&gt;Introducing Data Relationships, Techniques for Data Manipulation, and Access Methods&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="SAS" /><summary type="html">Overview Combining SAS Data Sets Vertically Combining SAS Data Sets Horizontally</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SAS: Report to Excel</title><link href="https://subaiwen.github.io/sas-proc-report/" rel="alternate" type="text/html" title="SAS: Report to Excel" /><published>2020-01-17T22:13:00+00:00</published><updated>2020-01-17T22:13:00+00:00</updated><id>https://subaiwen.github.io/sas-proc-report</id><content type="html" xml:base="https://subaiwen.github.io/sas-proc-report/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#ODS&quot;&gt;ODS: TAGSETS.EXCELXP VS. EXCEL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#proc-report&quot;&gt;PROC REPORT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;ods&quot;&gt;ODS&lt;/h2&gt;
+&lt;p&gt;ODS (Output Delivery System): delivers output in a variety of formats, including HTML, Rich Text Format (RTF), PostScript (PS), Portable Document Format (PDF), and SAS data sets.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Traditional SAS output: designed for line–printer&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Basic ODS syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ODS TRACE ON &amp;lt;/&amp;lt;options&amp;gt;&amp;gt;; 
+	ODS &amp;lt;destination&amp;gt; &amp;lt;FILE=filename&amp;gt;; 
+	ODS OUTPUT output-object-name=SAS-data-set-name; 
+	ODS &amp;lt;destination&amp;gt; SELECT output-object-name|ALL|NONE; 
+		... PROC ...
+	ODS &amp;lt;destination&amp;gt; CLOSE;  
+ODS TRACE OFF; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Destinations&lt;/strong&gt;: ODS can be used to route quality presentation files to various destinations, including LISTING (default), HTML, RTF, PRINTER, and PDF.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt;: Output objects are created by ODS to store the formatted results of most SAS procedures.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Style&lt;/strong&gt;: Styles define the presentation attributes of a report, such as font and color.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Very often, we report SAS tables to Excel. In this case we can utilize &lt;strong&gt;ODS TAGSETS.EXCELXP&lt;/strong&gt; and &lt;strong&gt;ODS EXCEL&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-ods-excel&quot;&gt;1. ODS Excel&lt;/h3&gt;
+
+&lt;p&gt;Starting in SAS 9.4 maintenance release 3, &lt;a href=&quot;https://documentation.sas.com/?docsetId=odsug&amp;amp;docsetTarget=p09n5pw9ol0897n1qe04zeur27rv.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;&lt;strong&gt;ODS Excel&lt;/strong&gt;&lt;/a&gt; destination creates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.xlsx&lt;/code&gt; files that can be used with Microsoft Office 2010 or later. &lt;strong&gt;ODS Excel&lt;/strong&gt; Formats With &lt;strong&gt;SAS format&lt;/strong&gt;, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comma7.&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ods _all_ close;
+ods excel file=&quot;/myshare/sample.xlsx&quot; style= &amp;lt;style name&amp;gt; options(&amp;lt;option1 option2&amp;gt;); /*Opens Excel*/
+...
+ods excel close; /*Closes Excel */
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;style&quot;&gt;Style&lt;/h4&gt;
+&lt;p&gt;You can view the list of styles that are available at your site by submitting the statements below:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;proc template;
+     list styles;
+run; quit;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-ods-tagsetsexcelxp&quot;&gt;2. ODS TAGSETS.EXCELXP&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;ExcelXP tagset&lt;/strong&gt; creates a Microsoft XML spreadsheet file, which can be used with Excel 2002 and later. &lt;strong&gt;ExcelXP tagset&lt;/strong&gt; does not create a native Excel format (.xlsx). &lt;strong&gt;ExcelXP tagset&lt;/strong&gt; Formats With &lt;a href=&quot;https://docs.microsoft.com/en-us/office/troubleshoot/excel/format-cells-settings&quot;&gt;TAGTTR&lt;/a&gt;, i.e. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TAGATTR = &amp;lt;attribute&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Syntax:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ODS TAGSETS.EXCELXP PATH=&quot;/path/&quot; file=&quot;file.xls&quot; style=&amp;lt;style&amp;gt; options(&amp;lt;option1&amp;gt; &amp;lt;option2&amp;gt;)
+options(&amp;lt;option3&amp;gt;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To see references to &lt;a href=&quot;https://support.sas.com/rnd/base/ods/odsmarkup/excelxp_help.html&quot;&gt;Suboptions&lt;/a&gt;, submit the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ODS tagsets.excelxp file=&quot;test.xml&quot; options(doc=&quot;help&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example: TAGGATR Formats preserve comma’s &amp;amp; trailing zeroes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ods tagsets.excelxp path=&quot;/path/&quot; file=&quot;excelxp.xls&quot; style=printer options(header_data_associations=&quot;yes&quot; autofit_height='yes')
+options(embedded_titles=&quot;yes&quot; embedded_footnotes='yes' absolute_column_width=&quot;37,9,9&quot;);
+proc report data=section1 nowd spanrows split='|' style(header)=[fontweight=bold fontsize=10pt font=(Times, 8pt)];
+column name (&quot;Special Census&quot; number pc);
+	define name / &quot;Subject&quot; f=$table1f. font=(TimesNewRoman, 10pt)];
+	define number / 'Number' style(column)=[tagattr=&quot;format:#,##0&quot; font=(TimesNewRoman, 10pt)] ; 
+	define pc / 'Percent' style(column)=[tagattr=&quot;format:##0.0&quot; font=(TimesNewRoman, 10pt)] ;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1gblwcsg05ij31n80iqdiy.jpg&quot; width=&quot;600&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;proc-report&quot;&gt;Proc Report&lt;/h2&gt;
+&lt;p&gt;To control the report in an Excel Workbook, we can utilize &lt;strong&gt;ODS&lt;/strong&gt; combined with &lt;strong&gt;PROC REPORT&lt;/strong&gt;. The SAS paper &lt;a href=&quot;https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2479-2018.pdf&quot;&gt;&lt;strong&gt;Unleash the Power of PROC REPORT
+with the ODS EXCEL Destination&lt;/strong&gt;&lt;/a&gt; has very detailed examples. Here I list some common used demos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Demo: Multiple Worksheets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ods tagsets.excelxp path=&quot;/path/&quot; file=&quot;test.xls&quot; style=&amp;lt;style&amp;gt; options(&amp;lt;option&amp;gt;)
+ods tagsets.excelxp options(sheet_name = 'Sheet 1');
+	proc report;
+	...
+	run;
+	
+ods tagsets.excelxp options(sheet_name = 'Sheet 2');
+	proc report;
+	...
+	run;
+ods tagsets.excelxp close;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example: Cell Merge&lt;/strong&gt;&lt;br /&gt;
+SPANROWS option works on column that uses GROUP or ORDER.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;ods excel file=&quot;&amp;amp;file&quot; options(sheet_name=&quot;test&quot;);
+ods escapechar='~';
+ods text=&quot;~S={font_size=14pt font_weight=bold vjust=m}~SAS Community&quot;;
+ods text=&quot;~S={font_size=14pt font_weight=bold vjust=m}&quot;;
+
+proc report data=sashelp.class nowd spanrows ;
+     column ('~S={foreground=purple}Measures' weight height)  
+            ('~S={foreground=green}Information' name age sex);
+     define sex / order style(column)={vjust=c just=c};
+run;
+
+ods excel close;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1gbm1vrmt4nj30go0ggmyx.jpg&quot; width=&quot;600&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://support.sas.com/resources/papers/proceedings14/SAS388-2014.pdf&quot;&gt;&lt;strong&gt;Demo: Transpose&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2ywygvqj30n00bu0v2.jpg&quot; width=&quot;300&quot; /&gt;
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-SAS&quot;&gt;proc report data=&amp;amp;data nowd;
+     column league team,captain;
+     define league / group;
+     define team / across;
+     define captain / display;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1gbm2zhu31uj30kw0a8gnr.jpg&quot; width=&quot;200&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/content/dam/SAS/support/en/books/quick-results-with-the-output-delivery-system/58458_excerpt.pdf&quot;&gt;Introduction to the Output Delivery System (ODS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/resources/papers/proceedings17/0973-2017.pdf&quot;&gt;ODS TAGSETS.EXCELXP and ODS EXCEL SHOWDOWN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/resources/papers/proceedings17/0169-2017.pdf&quot;&gt;Using the New ODS EXCEL Destination in SAS® 9.4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2479-2018.pdf&quot;&gt;Unleash the Power of PROC REPORT
+with the ODS EXCEL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/rnd/papers/sgf07/sgf2007-report.pdf&quot;&gt;Beyond the Basics: Advanced PROC REPORT Tips and Tricks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://communities.sas.com/t5/ODS-and-Base-Reporting/PROC-REPORT-STYLE-IN-HEADER/td-p/91381&quot;&gt;PROC REPORT STYLE IN HEADER&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lexjansen.com/sesug/2018/SESUG2018_Paper-295_Final_PDF.pdf&quot;&gt;A Deep Dive into the SAS® ODS Excel Destination (TAGATTR)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/resources/papers/proceedings14/1854-2014.pdf&quot;&gt;Exporting formulas to Excel using the ODS ExcelXP tagset&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.sas.com/resources/papers/proceedings11/266-2011.pdf&quot;&gt;How to Use Microsoft Formats with ODS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Extra:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://documentation.sas.com/?docsetId=proc&amp;amp;docsetTarget=n00yutbvvckjwrn1ldg5xkvjy1pu.htm&amp;amp;docsetVersion=9.4&amp;amp;locale=en&quot;&gt;TABULATE Procedure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lexjansen.com/nesug/nesug06/dm/da05.pdf&quot;&gt;Introduction to PROC TABULATE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="SAS" /><summary type="html">Overview ODS: TAGSETS.EXCELXP VS. EXCEL PROC REPORT</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">月度总结</title><link href="https://subaiwen.github.io/report/" rel="alternate" type="text/html" title="月度总结" /><published>2020-01-10T14:23:00+00:00</published><updated>2020-01-10T14:23:00+00:00</updated><id>https://subaiwen.github.io/report</id><content type="html" xml:base="https://subaiwen.github.io/report/">&lt;p&gt;入职大概有一个多月，我将以技术和业务这两条线总结我近一个月的情况。&lt;br /&gt;
+&lt;a href=&quot;#技术&quot;&gt;技术&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#业务&quot;&gt;业务&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一技术&quot;&gt;一、技术&lt;/h2&gt;
+&lt;h3 id=&quot;1-软件&quot;&gt;1. 软件&lt;/h3&gt;
+&lt;h4 id=&quot;1-oracle-ddl&quot;&gt;(1) Oracle DDL&lt;/h4&gt;
+&lt;p&gt;来公司之前曾经接触过SQL server, 但未曾实际应用过，因为大部分的时间我都是直接用课程现有的数据，并没有机会去接触数据库。在接触SAS几天后，感觉SAS的数据查询效率太低，就转而使用Oracle SQL DDL进行数据查询。主要学习流程是看&lt;a href=&quot;https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/index.html&quot;&gt;Oracle 官方文件&lt;/a&gt;，并在家用
+&lt;a href=&quot;https://livesql.oracle.com/&quot;&gt;Oracle Live SQL&lt;/a&gt;测试代码。&lt;br /&gt;
+现阶段已经能掌握大部分字符型、数值型和日期型的oracle函数，也能用DDL处理大部分的问题。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;痛点：灵活性不够，不能满足多样化的数据层面操作，包括快速的纵横向合并、转置等。也不支持批量操作，比如建立变量、函数和循环。到报表生产流程也不支持报表输出和可视化的工作 (需要&lt;a href=&quot;https://technology.amis.nl/2011/02/19/create-an-excel-file-with-plsql/&quot;&gt;as_xlsxl包&lt;/a&gt;)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;2-plsql&quot;&gt;(2) PL/SQL&lt;/h4&gt;
+&lt;p&gt;在Oracle用DDL处理完宽表后，发现工具满足不了生产需求，于是开始&lt;a href=&quot;https://m.bilibili.com/video/av49926566&quot;&gt;学习PL/SQL&lt;/a&gt;，以&lt;a href=&quot;https://blogs.oracle.com/oraclemagazine/plsql-101&quot;&gt;官方博客&lt;/a&gt;为参考。因为PL/SQL语言与DDL大不相同，也没有现成的代码可以参考，所以最后投入生产失败。&lt;/p&gt;
+
+&lt;h4 id=&quot;3-sas&quot;&gt;(3) SAS&lt;/h4&gt;
+&lt;p&gt;最后我决定使用公司内最流行的SAS，基于几个优点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;公司内有很多现有的sas代码参考&lt;/li&gt;
+  &lt;li&gt;有问题能及时问同事解决&lt;/li&gt;
+  &lt;li&gt;容易上手，能比较快解决业务需求&lt;/li&gt;
+  &lt;li&gt;方便同事检阅代码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;目前已经能使用sas完成报表生产，包括取数、数据合并、数据操纵、ODS输出报表。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;痛点：有一些数据处理思维在SAS转化不了，比如操纵逐行的循环。可视化部分也有待加强。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;4-待探索&quot;&gt;(4) 待探索&lt;/h4&gt;
+&lt;p&gt;希望能在接下来的日子里探索出更加全面的数据流程 (Pipeline)，目前预想：&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1gar9nm7bgyj30xq0bw76r.jpg&quot; width=&quot;600&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&quot;2-结构化过程&quot;&gt;2. 结构化过程&lt;/h3&gt;
+&lt;p&gt;我尝试把生产的流程进行如图的结构化：&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;https://tva1.sinaimg.cn/large/006tNbRwgy1gar9s6p8mij30la0pqq89.jpg&quot; width=&quot;600&quot; /&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;二业务&quot;&gt;二、业务&lt;/h2&gt;
+&lt;p&gt;我将从公司、部门、职能三个层面聊一下我的见解。&lt;/p&gt;
+&lt;h3 id=&quot;1-公司&quot;&gt;1. 公司&lt;/h3&gt;
+&lt;p&gt;在没有进公司以前，我唯一接触过的信贷业务是我求学期间用的信用卡。所以我印象中的信用卡，是一个&lt;a href=&quot;http://www.ruanyifeng.com/blog/2019/07/origin-of-credit-card.html?from=groupmessage&amp;amp;isappinstalled=0&quot;&gt;方便消费的交易工具&lt;/a&gt;。这个月的工作“颠覆”了我对这个行业的认知。一是客户消费并不能给银行带来利润，二是信用卡的便利性大部分被移动支付取代。这大大压缩了银行信用卡的生存空间。对于客户来说，信用卡的吸引点已经不多：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;消费便利 ✖️&lt;/li&gt;
+  &lt;li&gt;外汇结算 ➖&lt;/li&gt;
+  &lt;li&gt;资金供给 ✔️&lt;/li&gt;
+  &lt;li&gt;消费权益 ➖&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我司作为区域性银行的子公司，空间相比全国性银行少了许多，但因为地理位置优势，仍能分割相当一部分的市场。根据市场规模和经济形势，我们的重点维护客群是能产生利润且风险较低的客群，即有分期需求同时有偿还能力的客户。对于这样的模式，我其实是有疑惑的：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当经济形势持续低迷，客户的消费将下降，分期比例下降，利润降低；若加大风险敞口获客，坏账增加，利润同样降低。&lt;/li&gt;
+  &lt;li&gt;当经济形势好转，客户对信用卡的资金需求降低，消费客户比例增加，利润同样减少&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;公司以后的利润空间在哪里？&lt;/p&gt;
+
+&lt;p&gt;另外，信用卡行业的未来是什么，对社会有什么意义？当它的消费便利性被移动支付取代，信贷功能被网上信贷取代（当然，现在的信用卡也是网上信贷，只是它的功能是依附在一张卡上面），人为什么还需要信用卡？它到底是一个消费工具还是信贷工具？&lt;/p&gt;
+
+&lt;h3 id=&quot;2-部门&quot;&gt;2. 部门&lt;/h3&gt;
+&lt;p&gt;作为市场与销售管理部门，职能在于为公司找到、抢占、维护市场的空间和提升利润。部门的分工基本覆盖到了渠道、市场维护和产品的模块。嗯，感觉没什么好说的，还需要继续了解。&lt;br /&gt;
+感觉目前部门在着重探索针对客户的精细化管理和规范化的活动管理。如何能精准地进行客户分群关乎到能否有效地维护细分的市场。而通过实验式的活动设计能探索出高效能的运营策略。这都需要理论、业务和系统的高度结合，不简单。&lt;/p&gt;
+
+&lt;h3 id=&quot;3-职能&quot;&gt;3. 职能&lt;/h3&gt;
+&lt;p&gt;作为市场部的数据分析员，职能的边界可能相对模糊–既要满足针对业务的数据需要，又要通过数据挖掘驱动业务。因为客户的画像、行为都记录在数据里面，所以对数据的管理等同于对客户的管理。&lt;br /&gt;
+我以为对数据（客户）的管理分为两个阶段：&lt;/p&gt;
+
+&lt;p&gt;1) 常规化的管理（Routine）, 对于任何业务都有结构化的分析体系，能通过固有的流程来对目前的整体业务状况进行评估。&lt;br /&gt;
+2) 个性化的管理（Customization），能针对不同的客户属性，有对应数据评估体系和运营策略，并挖掘客户的潜在需求或痛点。&lt;/p&gt;
+
+&lt;p&gt;目前市场部的数据能力还处在第一阶段初，我的期望是能通过我的能力推动完善第一阶段和开启第二阶段✌️。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;当然，配套的硬件环境还是非常重要的&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;三总结&quot;&gt;三、总结&lt;/h2&gt;
+&lt;p&gt;一个月来参加了金教授和Norman先生的咨询会，大大小小的部门会议，不同版块的部门培训，小范围的业务尝试都是很棒的学习机会。希望能保持对知识的饥渴和前进的能量。&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://minesafetydisclosures.com/blog/2019/5/29/part-l-a-history-of-visa&quot;&gt;A History of Visa&lt;/a&gt;&lt;/p&gt;</content><author><name>subaiwen</name></author><category term="blog" /><category term="工作" /><category term="中文" /><summary type="html">入职大概有一个多月，我将以技术和业务这两条线总结我近一个月的情况。 技术</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" /><media:content medium="image" url="https://subaiwen.github.io/assets/images/favicon/GitHub-Mark.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
